@@ -1,0 +1,48 @@
+{
+    "name": "main",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "directories": {
+        "test": "tests"
+    },
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "dev": "npm run development",
+        "development": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+        "watch": "npm run development -- --watch",
+        "hot": "cross-env NODE_ENV=development node_modules/webpack-dev-server/bin/webpack-dev-server.js --inline --hot --config=node_modules/laravel-mix/setup/webpack.config.js",
+        "prod": "npm run production",
+        "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+ssh://git@gitlab.com/work-global-base/main.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://gitlab.com/work-global-base/main/issues"
+    },
+    "homepage": "https://gitlab.com/work-global-base/main#readme",
+    "devDependencies": {
+        "cross-env": "^6.0.3",
+        "empty-module": "0.0.2",
+        "laravel-mix": "^5.0.1",
+        "sass": "^1.25.0",
+        "sass-loader": "^8.0.2",
+        "vue-template-compiler": "^2.6.11"
+    },
+    "dependencies": {
+        "axios": "^0.19.2",
+        "blazy": "^1.8.2",
+        "css-loader": "^3.4.2",
+        "daterangepicker": "^3.0.5",
+        "jquery": "^3.4.1",
+        "jquery-modal": "^0.9.2",
+        "jquery-validation": "^1.19.2",
+        "select2": "^4.0.13",
+        "slick-carousel": "^1.8.1",
+        "toastr": "^2.1.4"
+    }
+}

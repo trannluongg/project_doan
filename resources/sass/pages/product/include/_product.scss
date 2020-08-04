@@ -1,0 +1,14 @@
+@media (max-width: 992px) {
+    .product{
+        padding: 0 15px;
+    }
+}
+
+@media (max-width: 576px) {
+    .product{
+        padding: 0;
+        h2{
+            padding-left: 10px;
+        }
+    }
+}

@@ -1,0 +1,17 @@
+// Base
+@import "../../base/common";
+@import "~jquery-modal/jquery.modal.min.css";
+
+// Component global
+@import "../../components/header/header";
+@import "../../components/slick/custom_slick";
+@import "../../components/footer/footer";
+@import '../../components/header/header_responsive';
+@import "../../components/modal_custom";
+@import "../../components/modal_product/product_detail";
+
+
+//include
+@import "include/product_detail";
+@import "include/title_product";
+@import "include/product_same";

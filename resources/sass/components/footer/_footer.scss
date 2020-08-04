@@ -1,0 +1,121 @@
+footer {
+    width: 100%;
+    min-width: 1024px;
+    margin: 0 auto;
+    background: #fff;
+    overflow: hidden;
+    clear: both;
+}
+.rowfoot1 {
+    display: block;
+    overflow: hidden;
+    width: 100%;
+    min-width: 1024px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 15px 0;
+    .colfoot {
+        float: left;
+        width: 33.33%;
+        margin: 0;
+        position: relative;
+        li {
+            float: none;
+            position: relative;
+            font-size: 13px;
+            color: #444;
+            a {
+                display: block;
+                color: #288ad6;
+                font-size: 14px;
+                line-height: 25px;
+                padding-top: 5px;
+                &.bct, &.dmca-badge {
+                    display: inline-block;
+                }
+            }
+            p {
+                display: block;
+                padding-top: 5px;
+                line-height: 25px;
+                font-size: 14px;
+                color: #666;
+                a {
+                    display: inline;
+                    font-weight: 600;
+                    color: #333;
+                    padding: 0 5px;
+                }
+            }
+        }
+    }
+}
+.rowfoot2 {
+    width: 100%;
+    min-width: 980px;
+    overflow: hidden;
+    background: #f8f8f8;
+    padding: 10px 0;
+    p {
+        display: block;
+        width: 100%;
+        margin: auto;
+        font-size: 10px;
+        color: #999;
+        text-align: center;
+    }
+    a {
+        color: #999;
+    }
+}
+
+@media (max-width: 992px) {
+    footer {
+        min-width: 100%;
+    }
+    .rowfoot1 {
+        min-width: 100%;
+        max-width: 100%;
+        padding: 15px;
+        .colfoot {
+            float: left;
+            width: 33.33%;
+            margin: 0;
+            position: relative;
+        }
+    }
+    .rowfoot2 {
+        min-width: 100%;
+        p{
+            padding: 0 15px;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    footer {
+        min-width: 100%;
+    }
+    .rowfoot1 {
+        min-width: 100%;
+        max-width: 100%;
+        .colfoot {
+            float: left;
+            width: 42%;
+            margin: 0;
+            margin: 0 15px;
+            position: relative;
+            &.w-100{
+                width: 100%;
+            }
+        }
+    }
+    .rowfoot2 {
+        min-width: 100%;
+        p{
+            padding: 0 15px;
+        }
+    }
+}
+
+

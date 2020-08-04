@@ -1,0 +1,15 @@
+// Base
+@import "../../base/common";
+
+// Component global
+@import "../../components/header/header";
+@import "../../components/footer/footer";
+@import '../../components/header/header_responsive';
+
+
+//include
+@import "include/mobile/search_mobile";
+@import "include/mobile/search_price";
+@import "include/mobile/search_brand";
+@import "include/mobile/sort";
+@import "include/mobile/result_search";

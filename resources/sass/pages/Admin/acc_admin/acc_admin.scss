@@ -1,0 +1,45 @@
+@import "./../../../components/loading/loading";
+
+#card-edit{
+    display: none;
+}
+
+#card-edit-avatar{
+    display: none;
+}
+
+.avatar{
+    display: block;
+    width: 50px;
+    height: 50px;
+    img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 50%;
+    }
+}
+
+.upload{
+    position: relative;
+    input{
+        position: relative;
+        opacity: 0;
+        z-index: 1;
+        width: 82px;
+    }
+    .upload-image{
+        position: absolute;
+        top: 35px;
+        cursor: pointer;
+    }
+}
+
+#image-preview-acc, #image-preview-acc-edit{
+    width: 200px;
+    margin-top: 20px;
+    img{
+        width: 100%;
+        border-radius: 8px;
+    }
+}

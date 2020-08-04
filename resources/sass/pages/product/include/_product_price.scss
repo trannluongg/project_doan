@@ -1,0 +1,54 @@
+.fs-ctelist {
+    padding: 25px 0% 30px;
+    background: #fff;
+    .fs-ctetit {
+        text-align: center;
+        font-size: 16px;
+        color: #4a4a4a;
+        text-transform: uppercase;
+        margin-bottom: 25px;
+    }
+    .fs-cteul {
+        display: table;
+        width: 100%;
+        li {
+            display: table-cell;
+            text-align: center;
+            width: 13.66%;
+            a {
+                display: inline-block;
+                span {
+                    display: inline-block;
+                    text-align: center;
+                    overflow: hidden;
+                    margin-bottom: 15px;
+                    padding: 10px;
+                    width: 77px;
+                    height: 77px;
+                    background: #fff;
+                    border: solid 1px #dcdcdc;
+                    -webkit-border-radius: 100%;
+                    -moz-border-radius: 100%;
+                    border-radius: 100%;
+                }
+                p {
+                    font-size: 14px;
+                    text-align: center;
+                    color: #4a4a4a;
+                }
+            }
+        }
+    }
+    .ic-ctli {
+        margin-top: 23px;
+        display: inline-block;
+        width: 34px;
+        height: 8px;
+        background-position: -152px -183px;
+    }
+    .icdt {
+        display: inline-block;
+        background-image: url(/../../assets/images/icondt.png);
+        background-repeat: no-repeat;
+    }
+}

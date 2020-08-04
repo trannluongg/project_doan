@@ -1,0 +1,199 @@
+@media (max-width: 1200px) {
+    .f-hdtop {
+        .f-wrap{
+            .fs-logo{
+                margin-left: 10px;
+            }
+            .fs-search > form {
+                width: 564px;
+            }
+            .fs-hdmn{
+                li{
+                    &.show-mobile{
+                        margin-right: 10px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1024px) {
+    .f-hdtop {
+        .f-wrap{
+            .fs-logo{
+                margin-left: 10px;
+            }
+            .fs-hdmn{
+                li{
+                    margin-left: 10px;
+                    &.show-mobile{
+                        margin-right: 10px;
+                    }
+                }
+            }
+        }
+    }
+    .fs-menu{
+        .fs-mnul{
+            overflow-x: scroll;
+            overflow-y: hidden;
+            > li > a{
+                white-space: nowrap;
+            }
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    .f-hdtop {
+        .f-wrap{
+            .fs-logo{
+                margin-left: 10px;
+            }
+            .fs-search > form {
+                width: 430px;
+            }
+            .fs-hdmn{
+                li{
+                    display: none;
+                    &.show-mobile{
+                        display: block;
+                        margin-right: 10px;
+                    }
+                    &.menu{
+                        display: inline-block;
+                        a{
+                            line-height: 50px;
+                        }
+                    }
+                    a{
+                        .icon-basket{
+                            line-height: 45px;
+                        }
+                    }
+                    span{
+                        display: none;
+                    }
+
+                }
+            }
+        }
+    }
+    .fs-menu{
+        .fs-mnul{
+            overflow-x: scroll;
+            overflow-y: hidden;
+            > li > a{
+                white-space: nowrap;
+            }
+        }
+    }
+    #all-cart {
+        right: -14px;
+        ul{
+            padding-left: 0;
+        }
+    }
+}
+
+
+@media (max-width: 768px) {
+    header{
+        background: #ff9c00;
+    }
+    .f-wrap {
+        width: 100%;
+        max-width: 100%;
+    }
+    .f-hdtop {
+        height: 48px;
+    }
+    .f-hdtop{
+        .f-wrap{
+            .fs-hdmn{
+                li{
+                    display: none !important;
+                    &.show-mobile{
+                        display: block !important;
+                        z-index: 100;
+                    }
+                    .hide{
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+    .f-hdtop .f-wrap{
+        .fs-logo {
+            margin-top: 4px;
+            margin-left: 8px;
+        }
+        .fs-hdmn li > a > i {
+            color: #fff;
+            font-size: 20px;
+            display: block;
+            padding-right: 9px;
+            line-height: 43px;
+        }
+        .fs-search {
+            width: 100%;
+            margin-top: 2px;
+            > form {
+                width: 95%;
+                margin: auto;
+                > input {
+                    width: 100%;
+                    height: 34px;
+                    padding: 0 10px 0 10px;
+                }
+               > button {
+                    display: none;
+                }
+            }
+        }
+    }
+    .fs-menu {
+        margin-top: 45px;
+       .f-wrap{
+           .fs-mnul {
+               display: flex;
+               align-items: center;
+               position: relative;
+               z-index: 10;
+               height: 100%;
+               overflow-x: scroll;
+               overflow-y: hidden;
+               > li > a {
+                   display: flex;
+                   align-items: center;
+                   height: 100%;
+                   font-size: 12px;
+                   color: #fff;
+                   text-transform: uppercase;
+                   white-space: nowrap;
+               }
+           }
+       }
+    }
+    #all-cart {
+        right: -48px;
+        top: 44px;
+        &:after{
+            right: 62px;
+        }
+    }
+}
+
+@media (max-width: 576px){
+    .col-sm-2 {
+        flex: 0 0 16.666667%;
+        max-width: 16.666667%;
+    }
+    .col-sm-8 {
+        flex: 0 0 66.666667%;
+        max-width: 66.666667%;
+    }
+}
+

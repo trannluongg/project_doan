@@ -1,0 +1,29 @@
+.mf-cate-soft {
+    height: 38px;
+    padding: 12px;
+    position: relative;
+    border-bottom: 1px solid #ebebeb;
+    background: #ffffff;
+    .mf-cateh1 {
+        font-size: 14px;
+        font-weight: bold;
+        text-transform: uppercase;
+        color: #000;
+        max-width: 80%;
+        height: 20px;
+        overflow: hidden;
+        white-space: nowrap;
+        -ms-text-overflow: ellipsis;
+        text-overflow: ellipsis;
+    }
+    select{
+        position: absolute;
+        right: 10px;
+        top: 4px;
+        height: 30px;
+        border: 1px solid #ebebeb;
+        background: #ffff;
+        padding: 0 10px;
+        border-radius: 5px;
+    }
+}

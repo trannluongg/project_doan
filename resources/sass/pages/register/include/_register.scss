@@ -1,0 +1,419 @@
+#container {
+    form{
+        height: 480px;
+        margin-bottom: 30px;
+    }
+    select{
+        border: 1px solid #ddd;
+        padding-right: 15px;
+        background: #fff;
+        height: 36px;
+        width: 60px;
+        border-radius: 2px;
+        color: #424242;
+        &#gender{
+            width: 100px;
+        }
+        &#year{
+            width: 90px;
+        }
+        &#month{
+            margin: 0 10px;
+        }
+    }
+}
+
+.login-title {
+    width: 810px;
+    margin: 50px auto 15px;
+    height: 26px;
+    line-height: 26px;
+    h3 {
+        font-size: 22px;
+        color: #424242;
+        font-weight: 400;
+    }
+    a {
+        color: #1a9cb7;
+        text-decoration: none;
+    }
+}
+
+.login-other {
+    float: right;
+    margin-top: -26px;
+    color: #757575;
+}
+
+.login .mod-login {
+    padding: 25px 50px 50px 25px;
+}
+
+.text-danger{
+    color: red;
+}
+
+.mod-login {
+    width: 810px;
+    box-sizing: border-box;
+    margin: 30px auto;
+    padding: 25px 50px;
+    background-color: #fff;
+    color: #757575;
+    height: 100%;
+}
+
+.mod-login-col1 {
+    width: 380px;
+    float: left;
+}
+
+.mod-input {
+    position: relative;
+    margin-bottom: 15px;
+    label {
+        font-size: 12px;
+        line-height: 15px;
+        overflow: hidden;
+        color: red;
+        display: block;
+        &.label{
+            margin-bottom: 5px;
+            height: 15px;
+            color: #424242;
+        }
+    }
+    input {
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        width: 100%;
+        border: 1px solid #ddd;
+        font-size: 14px;
+        height: 40px;
+        line-height: 38px \0;
+        padding: 0 35px 0 10px;
+        margin-bottom: 2px;
+        outline: none;
+    }
+}
+button, input, optgroup, select, textarea {
+    line-height: 1.15;
+    font-size: 100%;
+    margin: 0;
+}
+
+.mod-input-close-icon, .mod-input-password-icon {
+    padding: 10px;
+    font-family: "lazada-member";
+    position: absolute;
+    right: 0;
+    top: 19px;
+    font-size: 20px;
+    line-height: 24px;
+    cursor: pointer;
+}
+
+.mod-input-close-icon.open:after, .mod-input-password-icon.open:after {
+    content: "\e604";
+}
+
+.mod-login-birthday {
+    float: left;
+}
+
+.mod-login-birthday-hd {
+    color: #000;
+}
+
+.mod-birthday {
+    width: 260px;
+}
+
+.mod-birthday-hd {
+    color: #000;
+    display: none;
+}
+
+.mod-birthday-bd {
+    margin-top: 8px;
+}
+
+.mod-birthday-bd {
+    margin-top: 8px;
+}
+
+.mod-birthday-month {
+    float: left;
+    position: relative;
+}
+
+.mod-birthday-day {
+    width: 60px;
+    left: -1px;
+}
+
+.mod-birthday-day, .mod-birthday-year {
+    float: left;
+    min-width: inherit;
+    position: relative;
+}
+
+.mod-input.hidden {
+    display: none;
+}
+
+.mod-birthday label {
+    display: none;
+}
+
+.mod-login-gender {
+    float: left;
+    width: auto;
+}
+
+.mod-gender-hd {
+    color: #000;
+    margin-bottom: 8px;
+}
+
+.mod-gender .mod-fusion-select {
+    border: 1px solid #ddd;
+    padding-right: 15px;
+}
+
+.next-select-inner, .next-select:hover .next-select-clear {
+    display: inline-block;
+}
+
+.mod-login-col2 {
+    width: 305px;
+    float: right;
+}
+
+.mod-login-receive {
+    display: flex;
+    font-size: 12px;
+    margin: 15px 0;
+    label {
+        margin-right: 10px;
+        position: relative;
+        top: 2px;
+    }
+}
+
+.next-checkbox {
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    width: 16px;
+    height: 16px;
+    line-height: 14px;
+}
+
+.mod-login-btn {
+    margin: 12px 0;
+}
+
+.next-btn-large {
+    margin: 0;
+    height: 48px;
+    padding: 0 36px;
+    font-size: 14px;
+    line-height: 46px;
+    border-width: 1px;
+}
+
+.mod-login button {
+    width: 100%;
+}
+
+.mod-login-policy {
+    font-size: 12px;
+    margin-bottom: 20px;
+}
+
+.next-btn-primary, .next-btn-primary.visited, .next-btn-primary:link, .next-btn-primary:visited {
+    color: #fff;
+}
+.next-btn-primary {
+    border-style: solid;
+    background-color: #f57224;
+    border-color: transparent;
+}
+
+.mod-login {
+    width: 810px;
+    box-sizing: border-box;
+    margin: 30px auto;
+    padding: 25px 50px;
+    background-color: #fff;
+    color: #757575;
+}
+
+.mod-login-change-register .mod-change-register-btn {
+    margin-top: 12px;
+}
+
+.mod-login-change-register p{
+    font-size: 12px;
+}
+
+.next-btn-secondary, .next-btn-secondary.visited, .next-btn-secondary:link, .next-btn-secondary:visited {
+    color: #f57224;
+}
+.next-btn-secondary {
+    border-style: solid;
+    background-color: transparent;
+    border-color: #f57224;
+}
+
+.mod-third-party-login-line {
+    margin-bottom: 12px;
+}
+
+.mod-third-party-login-in-two-lines .mod-third-party-login-bd {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.mod-third-party-login-in-two-lines .mod-third-party-login-fb {
+    margin-right: 4px;
+    margin-bottom: 0;
+}
+.mod-third-party-login-in-two-lines .mod-third-party-login-btn {
+    flex: 1;
+}
+
+.mod-button {
+    display: block;
+    width: 100%;
+    height: 48px;
+    line-height: 48px;
+    text-align: center;
+    color: #fff;
+    font-size: 18px;
+    background-color: #f57224;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+}
+.mod-login-birthday-hd, .mod-gender-hd{
+    font-size: 12px;
+    color: #424242;
+}
+.mod-login button {
+    width: 100%;
+}
+.mod-third-party-login-fb {
+    background: #3b5998;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 3px;
+    margin-bottom: 12px;
+}
+
+.mod-third-party-login-google {
+    background: #d34836;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 3px;
+}
+
+@media (max-width: 992px) {
+    .login-title {
+        width: 100%;
+        padding: 25px 15px;
+        margin: 0;
+    }
+
+    .mod-login{
+        width: 700px;
+    }
+
+    .mod-login-col1 {
+        width: 330px;
+        float: left;
+    }
+
+    .login .mod-login {
+        padding: 25px;
+    }
+}
+
+@media (max-width: 768px) {
+    .fs-main {
+        padding: 130px 0 15px 0;
+        background: #f3f3f3;
+    }
+
+    .mod-login{
+        width: 540px;
+    }
+
+    #container form {
+        height: 715px;
+    }
+
+    .mod-login-col1 {
+        width: 100%;
+    }
+
+    .mod-login-col2 {
+        width: 100%;
+    }
+
+    .mod-login-row{
+        margin-bottom: 15px;
+    }
+
+    .login-title {
+        width: 100%;
+        padding: 25px 15px 0 25px;
+        margin: 0;
+        h3{
+            font-size: 18px;
+        }
+    }
+
+    .login-other{
+        float: inherit;
+        margin-top: 0;
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 576px) {
+
+    .mod-login{
+        width: 100%;
+    }
+
+    .login-title{
+        height: auto;
+    }
+}
+
+@media (max-width: 410px) {
+
+    #container form {
+        height: 790px;
+    }
+
+    .mod-gender-hd{
+        margin-top: 15px;
+    }
+}
+
+@media (max-width: 330px) {
+
+    #container form {
+        height: 825px;
+    }
+
+    .mod-gender-hd{
+        margin-top: 15px;
+    }
+}
+
+

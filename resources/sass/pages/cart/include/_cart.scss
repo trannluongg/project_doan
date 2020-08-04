@@ -1,0 +1,358 @@
+.ghg-main {
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.ghg-tops {
+    padding: 20px 0 10px;
+}
+
+.ghg-hds {
+    float: left;
+    font-size: 16px;
+    color: #3d3d3d;
+}
+
+.ghg-hds span, .ghg-hds span i {
+    font-style: normal;
+    font-size: 14px;
+    color: #4a4a4a;
+}
+
+.ghg-back {
+    float: right;
+    color: #337ab7;
+}
+
+.fs-ghlul {
+    position: relative;
+    background: #fff;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+}
+
+.fs-ghli {
+    position: relative;
+    border-bottom: 1px solid #e2e2e2;
+}
+
+.fs-ghcaif {
+    margin-left: 120px;
+    position: relative;
+}
+
+.fs-ghltb {
+    display: table;
+    width: 100%;
+    padding: 15px;
+}
+
+.fs-ghltd {
+    display: table-cell;
+    vertical-align: top;
+}
+.fs-ghltb1 {
+    width: 100px;
+    padding: 5px;
+    float: left;
+    text-align: center;
+    background: #fff;
+    display: block;
+    border: 1px solid #e2e2e2;
+}
+
+.fs-ghltb1 img {
+    display: inline-block;
+    max-width: 90px;
+}
+.fs-ghcatbs {
+    display: table;
+    width: 100%;
+    padding-right: 20px;
+}
+
+.fs-ghif {
+    padding-right: 10px;
+}
+
+.fs-ghname {
+    font-size: 16px;
+    font-weight: bold;
+    color: #4a4a4a;
+    margin-bottom: 10px;
+}
+
+.fs-ghcolor>span, .fs-ghcolor>ul {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.fs-ghpri {
+    width: 150px;
+}
+
+.fs-ghpri1 {
+    font-size: 16px;
+    color: #3d3d3d;
+    margin-bottom: 5px;
+}
+
+sup {
+    top: -.5em;
+}
+
+sub, sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+}
+
+.fs-ghplus {
+    width: 105px;
+}
+
+.fs-ghpltb {
+    width: 100%;
+    display: table;
+}
+
+.promotion{
+    white-space: normal;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+.fsghbtn {
+    float: left;
+    cursor: pointer;
+    width: 28px;
+    height: 28px;
+    line-height: 28px;
+    text-align: center;
+    color: #828282;
+    font-size: 22px;
+    background-color: #f8f8f8;
+    border: solid 1px #dfdfdf;
+}
+
+.fs-ghplip {
+    float: left;
+    width: 40px;
+    height: 28px;
+    text-align: center;
+    font-size: 13px;
+    color: #555;
+    border: solid 1px #e0e0e0;
+    border-left: none;
+    border-right: none;
+}
+
+.fs-ghdel {
+    position: absolute;
+    top: -8px;
+    right: 0;
+    cursor: pointer;
+    color: #b8b8b8;
+    font-size: 20px;
+}
+
+.ghg-bot {
+    position: relative;
+    padding: 15px;
+    background: #fff;
+    border-bottom: 1px solid #cdcdcd;
+}
+
+.ghg-bor {
+    float: right;
+    padding: 2px 0;
+}
+
+.ghg-bor>li {
+    padding: 3px 5px;
+}
+
+.ghg-bor>li label {
+    width: 115px;
+    float: left;
+    text-align: left;
+}
+
+.ghg-br2 label {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+}
+
+.ghg-bor>li span {
+    margin-left: 120px;
+    text-align: right;
+    display: block;
+}
+
+.ghg-br2 span {
+    font-size: 16px;
+    font-weight: bold;
+    color: #d0021b;
+}
+
+.ghg-form {
+    background: #fff;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+.ghg-formtit {
+    font-size: 18px;
+    font-weight: bold;
+    color: #d0021b;
+    margin-bottom: 25px;
+}
+
+.gh-popfm>li {
+    margin-bottom: 15px;
+    display: table;
+    width: 100%;
+}
+
+.gh-popfm>li>label {
+    display: table-cell;
+    width: 140px;
+    vertical-align: top;
+    font-weight: bold;
+}
+
+.gh-popfm>li>label>sup {
+    font-weight: bold;
+    color: #d0021b;
+    text-decoration: none;
+    border-bottom: none;
+}
+
+.gh-popfm>li>div {
+    display: table-cell;
+    vertical-align: top;
+}
+
+.gh-popfm>li input {
+    height: 36px;
+    padding: 6px 12px;
+    width: 100%;
+    font-size: 13px;
+    border: solid 1px #ccc;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    -webkit-box-shadow: inset 0 1px 3px 0 rgba(0,0,0,.22);
+    -moz-box-shadow: inset 0 1px 3px 0 rgba(0,0,0,.22);
+    box-shadow: inset 0 1px 3px 0 rgba(0,0,0,.22);
+}
+
+ul.gh-popfm>li:nth-child(3) {
+    display: table !important;
+}
+
+ul.gh-popfm>li:nth-child(3)>label {
+    display: table-cell !important;
+}
+
+.gh-popfm>li>label>span {
+    display: block;
+    font-size: 12px;
+    color: #626262;
+    font-weight: normal;
+}
+
+.gh-popfm-nt {
+    font-size: 12px;
+    font-style: italic;
+    color: #4a4a4a;
+    padding: 5px 0;
+}
+.gfhrows {
+    display: table;
+    width: 100%;
+}
+
+.gfhrows>p {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.gfhrows>p>button {
+    display: block;
+    width: 100%;
+    height: 53px;
+    text-align: center;
+    padding: 1px 5px 0;
+    outline: 0;
+    border-radius: 2px;
+}
+
+.fs-ghggbtn {
+    background-color: #d0021b;
+    border: solid 1px #d0021b;
+    margin-right: 10px;
+}
+
+.gfhrows>p>button strong {
+    display: block;
+    text-align: center;
+    text-transform: uppercase;
+    line-height: 1;
+    font-size: 18px;
+    font-weight: bold;
+}
+.fs-ghggbtn strong, .fs-ghggbtn span {
+    color: #fff;
+}
+
+.loading-cart{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #00000052;
+    z-index: 1;
+    display: none;
+    img{
+        display: block;
+        margin: auto;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100px;
+    }
+}
+@media (max-width: 768px) {
+    .fs-main {
+        padding: 130px 0 15px 0;
+        background: #f3f3f3;
+    }
+}
+
+@media (max-width: 576px) {
+    .fs-ghltd {
+        display: block;
+        vertical-align: top;
+    }
+
+    .gh-popfm > li > label {
+        width: 100px;
+    }
+    .ghg-back {
+        margin-right: 10px;
+        font-size: 13px;
+    }
+    .ghg-hds {
+       margin-left: 10px;
+       font-size: 14px;
+    }
+    .promotion{
+        display: none;
+    }
+}

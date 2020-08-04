@@ -1,0 +1,37 @@
+@import "./../../../components/loading/loading";
+
+#card-edit{
+    display: none;
+}
+
+.avatar{
+    display: block;
+    width: 100px;
+    img{
+        width: 100%;
+    }
+}
+
+.upload{
+    position: relative;
+    input{
+        position: relative;
+        opacity: 0;
+        z-index: 1;
+        width: 82px;
+    }
+    span{
+        position: absolute;
+        top: 35px;
+        cursor: pointer;
+    }
+}
+
+#image-preview, #image-preview-edit{
+    width: 200px;
+    margin-top: 20px;
+    img{
+        width: 100%;
+        border-radius: 8px;
+    }
+}

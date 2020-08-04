@@ -1,0 +1,14 @@
+// Base
+@import "../../base/common";
+
+// Component global
+@import "../../components/header/header";
+@import "../../components/slick/custom_slick";
+@import "../../components/footer/footer";
+@import '../../components/header/header_responsive';
+
+
+//include
+@import "include/search_slideshow";
+@import "include/search_left";
+@import "include/search_right";

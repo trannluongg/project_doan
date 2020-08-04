@@ -1,0 +1,161 @@
+//promotion
+#promotion, #product-same-brand{
+    background: #ffffff;
+    height: 418px;
+    overflow: hidden;
+    .owl-item{
+        width: 240px;
+        .item{
+            height: 418px;
+            transition: .3s;
+            &:hover{
+                z-index: 9;
+                -webkit-box-shadow: 1px 2px 7px 0 rgba(0,0,0,.21);
+                -moz-box-shadow: 1px 2px 7px 0 rgba(0,0,0,.21);
+                box-shadow: 1px 2px 7px 0 rgba(0,0,0,.21);
+            }
+            a{
+                outline-width: 0;
+            }
+            .fs-icimg{
+                height: 248px;
+                padding: 15px;
+                width: 100%;
+                text-align: center;
+            }
+            img{
+                width: 100%;
+                max-width: 200px;
+                max-height: 200px;
+            }
+            .fs-hslb {
+                margin: -25px 0 10px;
+                padding: 0 15px;
+                span{
+                    display: inline-block;
+                    height: 21px;
+                    line-height: 21px;
+                    padding: 0 10px 0 20px;
+                    position: relative;
+                    font-size: 12px;
+                    font-weight: bold;
+                    color: #fff;
+                    background: #ff7500;
+                    -webkit-border-radius: 2px;
+                    -moz-border-radius: 2px;
+                    border-radius: 2px;
+                    &:before {
+                        content: "";
+                        display: inline-block;
+                        position: absolute;
+                        top: -10px;
+                        left: -8px;
+                        width: 26px;
+                        height: 32px;
+                        background: url(/../../assets/images/fire.png) no-repeat center;
+                    }
+                }
+            }
+            .fs-hsif {
+                padding: 0 15px;
+                .fs-icname {
+                    font-size: 14px;
+                    line-height: 1.36;
+                    color: #505050;
+                    height: 38px;
+                    overflow: hidden;
+                    margin-bottom: 5px;
+                    padding: 0!important;
+                }
+                .fs-icpri {
+                    font-size: 16px;
+                    font-weight: bold;
+                    color: #333;
+                    line-height: 1;
+                    padding: 0!important;
+                    margin-bottom: 5px;
+                }
+                .fs-icpridel {
+                    color: #9b9b9b;
+                    font-size: 14px;
+                    line-height: 1;
+                    text-decoration: line-through;
+                    margin-bottom: 5px;
+                }
+                .fs-dttrate ul, .fs-dttrate p {
+                    display: inline-block;
+                    vertical-align: middle;
+                    font-size: 13px;
+                    color: #9b9b9b;
+
+                }
+                li{
+                    display: inline-block;
+                    font-size: 13px;
+                    color: #9b9b9b;
+                    cursor: pointer;
+                }
+                li span {
+                    display: inline-block;
+                    width: 12px;
+                    height: 12px;
+                    background-image: url(/../../assets/images/icondt.png);
+                    background-repeat: no-repeat;
+                }
+                .fs-dttr10 {
+                    background-position: 0 -244px;
+                }
+                .fs-dttr05 {
+                    background-position: -30px -244px;
+                }
+                .fs-dttr00 {
+                    background-position: -15px -244px;
+                }
+            }
+            .fs-pmos {
+                display: table;
+                width: 100%;
+                padding: 8px 15px;
+                .fs-pmosif {
+                    display: table-cell;
+                    vertical-align: top;
+                    color: #272727;
+                    >div{
+                        max-height: 43px;
+                        overflow: hidden;
+                        line-height: 1.3;
+                        font-size: 12px;
+                        color: #272727;
+                    }
+                }
+            }
+            .promo.noimage{
+                font-size: 12px;
+                color: #333;
+                white-space: normal;
+                line-height: 1.4;
+                width: 155px;
+                float: left;
+                margin-left: 10px;
+                display: -webkit-box;
+                -webkit-line-clamp: 3;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+            }
+        }
+    }
+}
+
+
+@media (max-width: 768px) {
+    #promotion, #product-same-brand{
+        .owl-item{
+            .item{
+                .promo.noimage{
+                    -webkit-line-clamp: 2;
+                    -webkit-box-orient: vertical;
+                }
+            }
+        }
+    }
+}

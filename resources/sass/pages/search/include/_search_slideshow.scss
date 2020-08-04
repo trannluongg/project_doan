@@ -1,0 +1,17 @@
+.fs-ctbn {
+    margin-bottom: 15px;
+    height: 100px;
+}
+
+.fsicte {
+    background: #fff;
+    position: relative;
+    overflow: hidden;
+    height: 100px;
+    .slick-slide img {
+        display: block;
+        width: 100%;
+        object-fit: cover;
+        height: 100px;
+    }
+}

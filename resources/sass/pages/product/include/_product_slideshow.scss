@@ -1,0 +1,58 @@
+.fs-ctbn {
+    margin-bottom: 15px;
+    height: 300px;
+}
+.slCateBner {
+    overflow: hidden;
+    height: 300px;
+    position: relative;
+}
+
+@media (max-width: 992px) {
+    .fs-ctbn {
+        margin-bottom: 15px;
+        height: 237px;
+    }
+    .slCateBner {
+        overflow: hidden;
+        height: 237px;
+        position: relative;
+        .slick-slide img {
+            display: block;
+            object-fit: cover;
+            height: 237px;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .fs-ctbn {
+        height: 210px;
+    }
+    .slCateBner {
+        overflow: hidden;
+        height: 210px;
+        position: relative;
+        .slick-slide img {
+            display: block;
+            object-fit: cover;
+            height: 210px;
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .fs-ctbn {
+        height: 180px;
+    }
+    .slCateBner {
+        overflow: hidden;
+        height: 180px;
+        position: relative;
+        .slick-slide img {
+            display: block;
+            object-fit: cover;
+            height: 180px;
+        }
+    }
+}

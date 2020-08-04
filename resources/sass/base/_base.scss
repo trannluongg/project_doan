@@ -1,0 +1,165 @@
+//@import "reset";
+
+// Container widths
+$grid-gutter-width: 30px !default;
+$container-max-widths: (
+        sm: 540px,
+        md: 720px,
+        lg: 960px,
+        xl: 1140px
+) !default;
+$grid-breakpoints: (
+        xs: 0,
+        sm: 576px,
+        md: 768px,
+        lg: 992px,
+        xl: 1200px
+) !default;
+@mixin make-container() {
+  width: 100%;
+  padding-right: ($grid-gutter-width / 2);
+  padding-left: ($grid-gutter-width / 2);
+  margin-right: auto;
+  margin-left: auto;
+}
+@mixin media-breakpoint-up($name, $breakpoints: $grid-breakpoints) {
+  $min: breakpoint-min($name, $breakpoints);
+  @if $min {
+    @media (min-width: $min) {
+      @content;
+    }
+  } @else {
+    @content;
+  }
+}
+// Minimum breakpoint width. Null for the smallest (first) breakpoint.
+//
+//    >> breakpoint-min(sm, (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px))
+//    576px
+@function breakpoint-min($name, $breakpoints: $grid-breakpoints) {
+  $min: map-get($breakpoints, $name);
+  @return if($min != 0, $min, null);
+}
+// For each breakpoint, define the maximum width of the container in a media query
+@mixin make-container-max-widths($max-widths: $container-max-widths, $breakpoints: $grid-breakpoints) {
+  @each $breakpoint, $container-max-width in $max-widths {
+    @include media-breakpoint-up($breakpoint, $breakpoints) {
+      max-width: $container-max-width;
+    }
+  }
+}
+$enable-grid-classes: true !default;
+
+//
+// Set the container width, and override it for fixed navbars in media queries.
+
+@if $enable-grid-classes {
+  .container {
+    @include make-container();
+    @include make-container-max-widths();
+  }
+}
+// Fluid container
+//
+// Utilizes the mixin meant for fixed width containers, but with 100% width for
+// fluid, full width layouts.
+
+@if $enable-grid-classes {
+  .container-fluid {
+    @include make-container();
+  }
+}
+*, ::after, ::before {
+  box-sizing: border-box;
+}
+//==============Style common===============//
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background: #f3f3f3;
+  color: $color_main;
+  font-family: Roboto, Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.5;
+  margin: 0;
+}
+.container {
+  padding: 0 10px;
+}
+
+.container.container-mh {
+  min-height: 90vh;
+}
+
+b, strong {
+  font-weight: 600;
+}
+a {
+  color: #2d2d2d;
+  text-decoration: none;
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}
+ul li {
+  list-style: none;
+}
+//html {scroll-behavior: smooth}
+.no-scroll {
+  overflow-y: hidden;
+}
+//.title {
+//  color: #333;
+//  font-size: 18px;
+//  font-weight: 600;
+//  margin-top: 20px;
+//  text-align: center;
+//  text-transform: uppercase;
+//}
+.text-center{
+  text-align: center;
+}
+
+.b-lazy {
+    -webkit-transition: opacity 500ms ease-in-out;
+    -moz-transition: opacity 500ms ease-in-out;
+    -o-transition: opacity 500ms ease-in-out;
+    transition: opacity 500ms ease-in-out;
+    max-width: 100%;
+    opacity: 0.2;
+    -webkit-filter: blur(5px); -moz-filter: blur(5px);
+    -o-filter: blur(5px); -ms-filter: blur(5px);
+    -webkit-transition: .5s -webkit-filter linear;
+    -moz-transition: .5s -moz-filter linear;
+    -o-transition: .5s -o-filter linear;
+    transition: .5s filter linear;
+}
+.b-lazy.b-loaded {
+    opacity: 1;
+    filter: url(#blur); filter: blur(0);  filter:progid:DXImageTransform.Microsoft.Blur(PixelRadius='3');
+}
+
+@media (max-width: 991px){
+  .container {
+    padding: 0 15px;
+  }
+}
+@media (min-width: 1440px){
+  .container-full {
+    max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media (max-width: 1440px){
+  .container-full {
+     width: 100%;
+     padding-left: 15px;
+     padding-right: 15px;
+  }
+}

@@ -1,0 +1,129 @@
+.fs-icate {
+    margin-bottom: 10px!important;
+}
+
+.fs-itit {
+    position: relative;
+    margin: 15px 0;
+    text-transform: uppercase;
+    line-height: 1;
+    a {
+        font-size: 20px;
+        color: #3d3d3d;
+    }
+}
+
+.fsicte2{
+    background: #fff;
+    position: relative;
+    overflow: hidden;
+    height: 340px;
+    .owl-item{
+        width: 204.8px;
+    }
+    .item {
+        height: 340px;
+        position: relative;
+        margin-bottom: 5px;
+        background: #fff;
+        -moz-transition: all .3s ease 0s;
+        -webkit-transition: all .3s ease 0s;
+        -o-transition: all .3s ease 0s;
+        transition: all .3s ease 0s;
+        &:hover{
+            z-index: 9;
+            -webkit-box-shadow: 1px 2px 7px 0 rgba(0,0,0,.21);
+            -moz-box-shadow: 1px 2px 7px 0 rgba(0,0,0,.21);
+            box-shadow: 1px 2px 7px 0 rgba(0,0,0,.21);
+        }
+        >a{
+            display: table-cell;
+            position: relative;
+            z-index: 1;
+            height: 40px;
+            vertical-align: middle;
+        }
+        .fs-icimg {
+            height: 248px;
+            padding: 20px;
+            width: 100%;
+            text-align: center;
+           img {
+                max-width: 200px;
+                max-height: 200px;
+            }
+        }
+        .fs-icname {
+            font-size: 14px;
+            line-height: 1.36;
+            color: #383838;
+            max-height: 38px;
+            overflow: hidden;
+            margin-bottom: 5px;
+            padding: 0 20px;
+        }
+        .fs-icpri {
+            font-size: 16px;
+            font-weight: bold;
+            color: #383838;
+            padding: 0 20px;
+        }
+        del {
+            color: #9b9b9b;
+            padding-left: 8px;
+            font-size: 14px;
+            text-decoration: line-through;
+            font-weight: normal;
+        }
+    }
+    .fs-dttrate {
+        padding: 0 20px;
+        display: block;
+        margin-bottom: 15px;
+        ul, p{
+            display: inline-block;
+            vertical-align: middle;
+            font-size: 13px;
+            color: #9b9b9b;
+        }
+        ul li{
+
+            display: inline-block;
+            font-size: 13px;
+            color: #9b9b9b;
+            cursor: pointer;
+        }
+        li span {
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            background-image: url(/../../assets/images/icondt.png);
+            background-repeat: no-repeat;
+        }
+        .fs-dttr10 {
+            background-position: 0 -244px;
+        }
+        .fs-dttr05 {
+            background-position: -30px -244px;
+        }
+        .fs-dttr00 {
+            background-position: -15px -244px;
+        }
+    }
+    .fs-lbsr {
+        position: absolute;
+        z-index: 2;
+        top: 10px;
+        right: 10px;
+        display: inline-block;
+        padding: 0 5px;
+        text-align: center;
+        line-height: 21px;
+        font-size: 12px;
+        color: #fff;
+        -webkit-border-radius: 2px;
+        -moz-border-radius: 2px;
+        border-radius: 2px;
+        background-color: #ff2842;
+    }
+}

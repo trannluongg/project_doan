@@ -1,0 +1,47 @@
+@import "./../../../components/loading/loading";
+
+#card-edit{
+    display: none;
+}
+
+.avatar{
+    display: block;
+    width: 60px !important;
+    img{
+        width: 100%;
+         margin-bottom: 10px;
+    }
+}
+
+.upload{
+    position: relative;
+    input{
+        position: relative;
+        opacity: 0;
+        z-index: 1;
+        width: 82px;
+    }
+    .upload-image{
+        position: absolute;
+        top: 35px;
+        cursor: pointer;
+    }
+}
+
+.select2-container{
+    display: block;
+}
+
+#image-preview-pro, #image-preview-pro-edit{
+   img{
+       margin-bottom: 10px;
+       object-fit: cover;
+   }
+}
+
+table{
+    td{
+        vertical-align: middle !important;
+        box-sizing: border-box;
+    }
+}
