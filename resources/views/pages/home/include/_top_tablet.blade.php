@@ -37,10 +37,7 @@
         @else
             <li data-id="{{ $tablet['id'] }}">
                 <a href="{{ route('get.user.get_product_detail', ['id' => $tablet['id'] ]) }}">
-                    @php
-                        $rand_tablet = rand(0,2);
-                    @endphp
-                    <img width="180" height="180" class=" lazyloaded" alt="{{ $tablet['name'] }}" src="{{ url('upload/product/'. $tablet['image'][$rand_tablet] )}}">
+                    <img width="180" height="180" class=" lazyloaded" alt="{{ $tablet['name'] }}" src="{{ url('upload/product/'. $tablet['image'][0] )}}">
                     <h3>{{ $tablet['name'] }}</h3>
                     <div class="price">
                         <strong>{{ number_format($tablet['price'] * ((100-$tablet['sale']) / 100) ,0,",",".") . 'đ' }}</strong>

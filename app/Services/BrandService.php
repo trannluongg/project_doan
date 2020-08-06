@@ -12,6 +12,7 @@ namespace App\Services;
 use App\Repository\Brand\BrandRepositoryInterface;
 use App\Service\BaseService;
 use App\Transformers\Brand\BrandTransformer;
+use Illuminate\Http\Request;
 
 class BrandService extends BaseService
 {
@@ -34,5 +35,11 @@ class BrandService extends BaseService
         $brands = $this->brandRepository->getList($filter, $fields);
 
         return $this->responseDataCollection($brands, BrandTransformer::class);
+    }
+
+    public function getBrandWithSlug($slug = null)
+    {
+        $brand = $this->brandRepository->getBrandWithSlug($slug);
+        return $brand[0];
     }
 }

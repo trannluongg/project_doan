@@ -29,10 +29,7 @@
         @else
             <li data-id="{{ $pin['id'] }}">
                 <a href="{{ route('get.user.get_product_detail', ['id' => $pin['id'] ]) }}">
-                    @php
-                        $rand_pin = rand(0,2);
-                    @endphp
-                    <img width="180" height="180" class=" lazyloaded" alt="{{ $pin['name'] }}" src="{{url('upload/product/'. $pin['image'][$rand_pin] )}}">
+                    <img width="180" height="180" class=" lazyloaded" alt="{{ $pin['name'] }}" src="{{url('upload/product/'. $pin['image'][0] )}}">
                     <h3>{{ $pin['name'] }}</h3>
                     <div class="price">
                         <strong>{{ number_format($pin['price'] * ((100-$pin['sale']) / 100) ,0,",",".") . 'đ' }}</strong>

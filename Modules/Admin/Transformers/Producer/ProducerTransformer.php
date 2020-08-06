@@ -20,7 +20,7 @@ class ProducerTransformer extends Transformer
         $data = [
             'id'                => $producers->id,
             'name'              => $producers->pro_name,
-            'avatar'            => $producers->pro_avatar ? 'http://localhost:8000/upload/producer/' . $producers->pro_avatar : '',
+            'avatar'            => $producers->pro_avatar ? $producers->pro_avatar : '',
             'created_at'        => $producers->created_at ? $producers->created_at->toDateTimeString() : null,
             'updated_at'        => $producers->updated_at ? $producers->updated_at->toDateTimeString() : null,
         ];

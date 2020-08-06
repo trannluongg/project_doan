@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\SetField\ProducerField;
 use Illuminate\Database\Eloquent\Model;
 use Modules\Admin\SetField\ProducersFiled;
 
@@ -11,6 +12,7 @@ class Producers extends Model
     protected $table = 'producers';
 
     public $fieldClass = ProducersFiled::class;
+    public $fieldClass_v2   = ProducerField::class;
 
     public $relationships = [
         'producer_products'           => Products::class

@@ -40,7 +40,7 @@ const Producer = {
                 let data = res.data.data.data;
                 $('#producer-id').val(data.id);
                 $('#name-prd-edit').val(data.name);
-                $('#image-preview-edit img').attr('src', data.avatar);
+                $('#image-preview-edit img').attr('src', 'http://doan.abc/upload/prducer/'. data.avatar);
 
             })
             .catch(err =>

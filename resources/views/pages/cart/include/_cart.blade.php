@@ -38,7 +38,7 @@
                             <div class="fs-ghltd fs-ghplus">
                                 <div class="fs-ghpltb clearfix">
                                     <span class="fsghbtn amount-reduction" data-id="{{$c['item']->id}}" data-price="{{$price}}"><i>-</i></span>
-                                    <input class="fs-ghplip amount" type="text" value="{{ $c['qty'] }}">
+                                    <input class="fs-ghplip amount" data-id="{{$c['item']->id}}" type="text" value="{{ $c['qty'] }}">
                                     <span class="fsghbtn amount-increase" data-id="{{$c['item']->id}}" data-price="{{$price}}">+</span>
                                 </div>
                             </div>

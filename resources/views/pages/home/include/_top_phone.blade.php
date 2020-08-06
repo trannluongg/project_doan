@@ -29,10 +29,7 @@
         @else
             <li data-id="{{ $phone['id'] }}">
                 <a href="{{ route('get.user.get_product_detail', ['id' => $phone['id'] ]) }}">
-                    @php
-                        $rand_phone = rand(0,2);
-                    @endphp
-                    <img width="180" height="180" class=" lazyloaded" alt="{{ $phone['name'] }}" src="{{ url('upload/product/'. $phone['image'][$rand_phone] )}}">
+                    <img width="180" height="180" class=" lazyloaded" alt="{{ $phone['name'] }}" src="{{ url('upload/product/'. $phone['image'][0] )}}">
                     <h3>{{ $phone['name'] }}</h3>
                     <div class="price">
                         <strong>{{ number_format($phone['price'] * ((100-$phone['sale']) / 100) ,0,",",".") . 'đ' }}</strong>

@@ -39,4 +39,9 @@ class BrandRepository extends EloquentRepository implements BrandRepositoryInter
 
         return $query;
     }
+
+    public function getBrandWithSlug($slug = null)
+    {
+        return $this->model->where('bra_slug', $slug)->limit(1)->get(['id', 'bra_name']);
+    }
 }

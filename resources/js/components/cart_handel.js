@@ -36,7 +36,7 @@ const CartHandel = {
         {
             let $value = $(this).val();
 
-            if (isNaN($value))
+            if (isNaN($value) || $value.trim() === '')
             {
                 console.log('dsjdsjsd');
                 $value = 1;

@@ -8,10 +8,7 @@
                 <div class="owl-item">
                 <div class="item">
                     <a href="{{ route('get.user.get_product_detail', ['id' => $accessories['id'] ]) }}">
-                        @php
-                            $rand_accessories = rand(0,2);
-                        @endphp
-                        <img width="180" height="180" class=" lazyloaded" alt="{{ $accessories['name'] }}" src="{{ url('upload/product/'. $accessories['image'][$rand_accessories] )}}">
+                        <img width="180" height="180" class=" lazyloaded" alt="{{ $accessories['name'] }}" src="{{ url('upload/product/'. $accessories['image'][0] )}}">
                         <h3>{{ $accessories['name'] }}</h3>
                         <h6 class="textkm"></h6>
                         <div class="price">

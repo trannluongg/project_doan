@@ -21,10 +21,10 @@ var build_js = [
     //     from: 'resources/js/slideshow/slideshow.js',
     //     to: 'js/slideshow_index.js'
     // },
-    // {
-    //     from: 'resources/js/slideshow/slideshow_product.js',
-    //     to: 'js/slideshow_product.js'
-    // },
+    {
+        from: 'resources/js/slideshow/slideshow_product.js',
+        to: 'js/slideshow_product.js'
+    },
     // {
     //     from: 'resources/js/slideshow/slideshow_search.js',
     //     to: 'js/slideshow_search.js'
@@ -32,6 +32,10 @@ var build_js = [
     {
         from: 'resources/js/pages/home/home.js',
         to: 'js/home.js'
+    },
+    {
+        from: 'resources/js/pages/product/product.js',
+        to: 'js/product.js'
     },
     // {
     //     from: 'resources/js/pages/search/search_mobile.js',
@@ -100,10 +104,10 @@ let build_scss = [
         from: 'resources/sass/pages/home/home.scss',
         to: 'css/home.css'
     },
-    // {
-    //     from: 'resources/sass/pages/product/product.scss',
-    //     to: 'css/product_user.css'
-    // },
+    {
+        from: 'resources/sass/pages/product/product.scss',
+        to: 'css/product_user.css'
+    },
     // {
     //     from: 'resources/sass/pages/search/search.scss',
     //     to: 'css/search.css'

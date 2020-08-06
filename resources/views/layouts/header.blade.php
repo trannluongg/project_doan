@@ -1,7 +1,7 @@
 <header class="fs-header">
     <div class="f-hdtop">
         <div class="f-wrap">
-            <a class="fs-logo" href="/" title=""><i class="ficon f-logo"></i></a>
+            <a class="fs-logo" href="/" title=""><i class="ficon f-logo"></i><span class="logo-text">shop.com</span></a>
             <ul class="fs-hdmn">
                 @if (isset($user) && $user)
                     <li class="menu-user">
@@ -48,7 +48,9 @@
                     <button type="submit" class="search-button"><i class="ficon f-search"></i></button>
                     <div class="fs-sresult" style="display : block !important">
                         <div class="fs-sremain">
-                            <ul></ul>
+                            <ul class="wrap-suggestion">
+
+                            </ul>
                         </div>
                     </div>
                 </form>
@@ -89,7 +91,7 @@
             <ul class="fs-mnul clearfix">
                 @foreach($menus as $menu)
                     <li>
-                        <a href="/{{ $menu->bra_slug }}" title="{{ $menu->bra_name }}"><i class="{{ $menu->bra_icon }}"></i>{{ $menu->bra_name }}</a>
+                        <a href="{{ route('get.brand.index', ['brand' => $menu->bra_slug]) }}" title="{{ $menu->bra_name }}"><i class="{{ $menu->bra_icon }}"></i>{{ $menu->bra_name }}</a>
                     </li>
                 @endforeach
             </ul>

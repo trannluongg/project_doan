@@ -113,19 +113,20 @@ class ProductService extends BaseService
         return $this->responseDataCollection($product, ProductTransformer::class);
     }
 
-    public function getProductSaleMax()
+    public function getProductSaleMax($brand_id = null, $limit = null)
     {
         $filter     = [
             'flag_field'    => true,
-            'limit'         => 15,
+            'limit'         => $limit ?? 15,
+            'brand_id'      => $brand_id,
             'order'         => [['sale', 'desc']]
         ];
 
         $fields     = 'name,price,image,sale,description,promotion,total,brand,category,producer,created_at';
 
-        $product_ = $this->productRepository->getList($filter,$fields);
+        $product_max_sale = $this->productRepository->getList($filter,$fields);
 
-        return $this->responseDataCollection($product_, ProductTransformer::class);
+        return $this->responseDataCollection($product_max_sale, ProductTransformer::class);
     }
 
     public function getProduct($id)
@@ -137,14 +138,15 @@ class ProductService extends BaseService
 
     public function addToCart(Request $request, $id)
     {
-        $qty = $request->get('qty') ?? 1;
+        $qty    = $request->get('qty') ?? 1;
+        $flag   = $request->get('flag') ?? 0;
 
         $product = $this->productRepository->firstById($id);
 
         $oldCart = Session::has('cart') ? Session::get('cart') : null;
 
         $cart = new Cart($oldCart);
-        $add = $cart->add($product, $product->id, $qty);
+        $add = $cart->add($product, $product->id, $qty, $flag);
         if ($add) $request->session()->put('cart', $cart);
         return $add;
     }
@@ -190,5 +192,22 @@ class ProductService extends BaseService
         $cart = new Cart($oldCart);
 
         return $cart;
+    }
+
+    public function getProductAjax(Request $request)
+    {
+        $key_search = $request->get('key_search');
+
+        $filter    = [
+            'key_search' => $key_search,
+            'flag_field'    => true,
+            'limit'         => 10
+        ];
+
+        $fields     = 'name,price,image,sale';
+
+        $product      = $this->productRepository->getList($filter,$fields);
+
+        return $this->responseDataCollection($product, ProductTransformer::class);
     }
 }

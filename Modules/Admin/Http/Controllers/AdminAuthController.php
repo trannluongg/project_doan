@@ -30,12 +30,12 @@ class AdminAuthController extends Controller
     {
         if (Auth::guard('admins')->user())
         {
-            return redirect()->route('get.admin.dashboard');
+            return redirect()->route('get.products.index');
         }
 
         if (!empty(AuthMe::token('admins')) && JWTAuth::setToken(AuthMe::token('admins'))->toUser())
         {
-            return redirect()->route('get.admin.dashboard');
+            return redirect()->route('get.products.index');
         }
 
         return view('admin::login');
@@ -47,7 +47,7 @@ class AdminAuthController extends Controller
 
         if ($result->getStatusCode() === Response::HTTP_OK)
         {
-            return redirect()->route('get.admin.dashboard');
+            return redirect()->route('get.products.index');
         }
         return view('admin::login');
     }

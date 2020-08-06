@@ -37,6 +37,7 @@ const ShowCart = {
     handelDataGetCart($data)
     {
         let html = '';
+
         if ($data)
         {
             Object.keys($data).forEach((val) =>

@@ -25,7 +25,7 @@ class Cart
         }
     }
 
-    public function add($item, $id, $qty)
+    public function add($item, $id, $qty, $flag = 0)
     {
         $price = $item->pro_price * ((100-$item->pro_sale) / 100);
 
@@ -38,14 +38,33 @@ class Cart
                 $storedItem = $this->items[$id];
             }
         }
-        if ($storedItem['qty'] + $qty > 10) return false;
+        if ($flag == 0)
+        {
+            if ($storedItem['qty'] + $qty > 10) return false;
 
-        $storedItem['qty'] += $qty;
-        $storedItem['price'] = $price * $storedItem['qty'];
-        $this->items[$id] = $storedItem;
+            $storedItem['qty'] += $qty;
 
-        $this->totalQty += $qty;
-        $this->totalPrice += $price * $qty;
+            $storedItem['price'] = $price * $storedItem['qty'];
+            $this->items[$id] = $storedItem;
+
+            $this->totalQty += $qty;
+            $this->totalPrice += $price * $qty;
+        }
+        else
+        {
+            $old_qty = $storedItem['qty'];
+            $storedItem['qty'] = $qty;
+
+            $storedItem['price'] = $price * $storedItem['qty'];
+            $this->items[$id] = $storedItem;
+
+            $this->totalQty -= $old_qty;
+            $this->totalQty += $qty;
+            $this->totalPrice -= $price * $old_qty;
+            $this->totalPrice += $price * $qty;
+        }
+
+
         return true;
     }
 

@@ -47,9 +47,15 @@
             <div>
                 <div class="gfhrows">
                     <p>
-                        <button type="button" class="fs-ghggbtn" id="ubtn">
-                            <strong>Đặt Hàng</strong>
-                        </button>
+                        @if($user)
+                            <button type="button" class="fs-ghggbtn" id="ubtn">
+                                <strong>Đặt Hàng</strong>
+                            </button>
+                        @else
+                            <a class="fs-ghggbtn" href="#modal-login" rel="modal:open">
+                                <strong>Đặt Hàng</strong>
+                            </a>
+                        @endif
                     </p>
                 </div>
             </div>

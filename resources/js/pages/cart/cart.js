@@ -3,6 +3,8 @@ import ShowCart from "../../components/show_cart";
 import SidebarMenu from "../../components/sidebar_mobile";
 import $ from "jquery";
 import Toast from "../../toastr/toastr";
+import AjaxSearch from "../../components/ajax_search_product";
+import 'jquery-modal';
 
 const Cart = {
     init()
@@ -13,6 +15,7 @@ const Cart = {
         this.amountReduction();
         this.amountChange();
         this.getProductRemoveToCart();
+        AjaxSearch.init();
     },
 
     amountIncrease()
@@ -117,6 +120,7 @@ const Cart = {
         else $('.amount-reduction').attr('disabled', false);
 
         let totalPrice  = res.data.totalPrice;
+
         totalPrice      = totalPrice
             .toString()
             .replace(/\D/g, "")
@@ -130,11 +134,14 @@ const Cart = {
 
     amountChange()
     {
+        let that = this;
+
         $('.amount').change(function ()
         {
-            let $value = $(this).val();
+            let $value  = $(this).val();
+            let $id     = $(this).data('id');
 
-            if (isNaN($value))
+            if (isNaN($value) || $value.trim() === '')
             {
                 $value = 1;
             }
@@ -147,6 +154,13 @@ const Cart = {
             }
             $('.loading-cart').fadeIn();
             $(this).val(parseInt($value));
+
+            let data = {
+                'qty' : $value,
+                'flag': 1
+            };
+
+            that.updateCartIncrease($id, data);
         });
     },
 

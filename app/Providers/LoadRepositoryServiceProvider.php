@@ -23,7 +23,10 @@ class LoadRepositoryServiceProvider extends ServiceProvider
         $models             = [
             'Product',
             'Brand',
-            'User'
+            'User',
+            'Producer',
+            'Bill',
+            'BillDetail'
         ];
         $namespace_frontend = "App\\Repository\\";
         foreach ($models as $model)

@@ -18,6 +18,7 @@
             @endif
         </div>
     </div>
+    @include('components.modal_login._login')
 @stop
 
 @section('script')

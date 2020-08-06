@@ -35,14 +35,17 @@ class ProductRepository extends EloquentRepository implements ProductRepositoryI
         $flag_field         = $filter['flag_field'] ?? null;
         $pro_not            = $filter['pro_not'] ?? null;
         $pro_brand_not      = $filter['pro_brand_not'] ?? null;
+        $pro_brand_id       = $filter['brand_id'] ?? null;
+        $pro_key_search     = $filter['key_search'] ?? null;
 
         $query          = $this->model->whereRaw(1);
 
         $query = $this->scopeQuery($query, $filter, $fields, '', $flag_field);
-
         if ($pro_brand)         $query->where('pro_brand', $pro_brand);
         if ($pro_not)           $query->where('id', '<>', $pro_not);
         if ($pro_brand_not)     $query->where('pro_brand', '<>', $pro_brand_not);
+        if ($pro_brand_id)      $query->where('pro_brand', $pro_brand_id);
+        if ($pro_key_search)    $query->where('pro_name', 'like', '%' . $pro_key_search . '%');
 
         return $query;
     }

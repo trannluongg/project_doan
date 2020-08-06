@@ -6,6 +6,7 @@ import axios from 'axios'
 import ShowCart from "../../components/show_cart";
 import SidebarMenu from "../../components/sidebar_mobile";
 import CartHandel from "../../components/cart_handel";
+import AjaxSearch from "../../components/ajax_search_product";
 
 const ProductDetail = {
     init()
@@ -15,6 +16,7 @@ const ProductDetail = {
         ShowCart.init();
         SidebarMenu.init();
         CartHandel.init();
+        AjaxSearch.init();
     },
 
     productDetailSlick()

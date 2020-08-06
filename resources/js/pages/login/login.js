@@ -1,6 +1,7 @@
 import SidebarMenu from "../../components/sidebar_mobile";
 import 'jquery-validation'
 import axios from 'axios';
+import AjaxSearch from "../../components/ajax_search_product";
 
 const Login = {
     init()
@@ -8,6 +9,7 @@ const Login = {
         SidebarMenu.init();
         this.validateForm();
         this.register();
+        AjaxSearch.init();
     },
 
     register()

@@ -13,7 +13,7 @@
 
 Route::get('/', 'HomeController@index')->name('get.user.home');
 
-Route::get('/phone', 'Product\PhoneController@index');
+Route::get('/san-pham/{brand}', 'Product\BrandController@index')->name('get.brand.index');
 
 Route::get('/search', 'Search\SearchController@index');
 Route::get('/product-detail', 'Product\ProductController@index');
@@ -40,3 +40,8 @@ Route::get('login/facebook', 'Auth\LoginController@loginFacebook')->name('get.us
 Route::get('login/facebook/callback', 'Auth\LoginController@loginFacebookCallback');
 
 Route::get('/logout', 'Auth\LoginController@logout')->name('get.user.logout');
+
+
+Route::get('/ajax-search', 'AjaxController@getProductAjax');
+
+Route::post('/order', 'AjaxController@getProductAjax');

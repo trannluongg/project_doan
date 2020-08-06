@@ -168,7 +168,7 @@ const Product = {
     {
         images.forEach(value =>
         {
-            let img = '<img class="col-lg-4" src="'+ value +'"/>';
+            let img = '<img class="col-lg-4" src="http://doan.abc/upload/producer/'+ value +'"/>';
             $('#image-preview-pro-edit').append(img);
         });
     },

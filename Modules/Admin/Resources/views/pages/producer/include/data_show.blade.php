@@ -34,7 +34,7 @@
                     <td><span class="text-danger font-weight-bold">{{ $p['name'] }}</span></td>
                     <td>
                         <span class="avatar">
-                            <img src="{{ $p['avatar'] }}" alt="">
+                            <img src="{{ url('upload/producer/' . $p['avatar']) }}" alt="">
                         </span>
                     </td>
                     <td>{{ $p['created_at'] }}</td>

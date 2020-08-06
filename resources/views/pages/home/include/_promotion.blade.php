@@ -7,10 +7,7 @@
                         <div class="item">
                             <a href="{{ route('get.user.get_product_detail', ['id' => $p_sale['id'] ]) }}" title="{{ $p_sale['name'] }}">
                                 <p class="fs-icimg">
-                                    @php
-                                        $rand = rand(0,2);
-                                    @endphp
-                                    <img class="lazy" src="{{ url('upload/product/'. $p_sale['image'][$rand]) }}" alt="{{ $p_sale['name'] }}">
+                                    <img class="lazy" src="{{ url('upload/product/'. $p_sale['image'][0]) }}" alt="{{ $p_sale['name'] }}">
                                 </p>
                                 <p class="fs-hslb"><span> {{'Giảm ' . number_format($p_sale['price'] - ($p_sale['price'] * ((100-$p_sale['sale']) / 100)) ,0,",",".") . 'đ' }}</span></p>
                                 <div class="fs-hsif">

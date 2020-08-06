@@ -40,7 +40,19 @@
         .ficon {
             display: inline-block;
             background-repeat: no-repeat;
-            background-image: url(https://fptshop.com.vn/images/icons.svg?v=032023);
+            background-image: url(../../../images/logo.png);
+            background-size: 73%;
+            width: 55px;
+            background-position: center;
+        }
+        .logo-text{
+            display: inline-block;
+            font-size: 20px;
+            font-weight: 500;
+            position: relative;
+            top: -5px;
+            left: -9px;
+            color: #000;
         }
 
         .fs-hdmn {
@@ -183,6 +195,7 @@
                     -webkit-border-radius: 2px;
                     -moz-border-radius: 2px;
                     border-radius: 2px;
+                    outline-width: 0;
                 }
 
                 > button {
@@ -209,7 +222,61 @@
                         background-position: -5px -80px;
                     }
                 }
-
+                .wrap-suggestion {
+                    border: 1px solid #e2e2e2;
+                    background: #fff;
+                    position: absolute;
+                    left: 0;
+                    width: 100%;
+                    top: 0;
+                    z-index: 9;
+                    max-height: 330px;
+                    overflow-y: auto;
+                    overflow-x: hidden;
+                    display: none;
+                    li{
+                        display: block;
+                        background: #fff;
+                        overflow: hidden;
+                        list-style: none;
+                        border-bottom: 1px dotted #ccc;
+                    }
+                    a{
+                        display: block;
+                        overflow: hidden;
+                        padding: 6px;
+                        color: #333;
+                        font-size: 12px;
+                        img{
+                            float: left;
+                            width: 60px;
+                            height: auto;
+                            margin: 0 6px 0 0;
+                        }
+                    }
+                    h3{
+                        display: block;
+                        width: auto;
+                        color: #333;
+                        font-size: 14px;
+                        font-weight: 700;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                    }
+                    h6 {
+                        font-size: 12px;
+                        color: #e02020;
+                    }
+                    span{
+                        font-size: 14px;
+                        color: #d0021b;
+                        float: none;
+                        font-weight: bold;
+                        display: inline-block;
+                        padding: 2px 2px 0 0;
+                    }
+                }
                 .fs-sresult {
                     display: block;
                     width: 100%;

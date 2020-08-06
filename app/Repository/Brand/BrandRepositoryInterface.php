@@ -14,4 +14,5 @@ use App\Core123\RepositoryInterface;
 interface BrandRepositoryInterface extends RepositoryInterface
 {
     public function getList($filter = [], $columns = null, $paginate = null);
+    public function getBrandWithSlug($slug = null);
 }

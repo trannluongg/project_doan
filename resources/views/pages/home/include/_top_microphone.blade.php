@@ -29,10 +29,7 @@
         @else
             <li data-id="{{ $microphone['id'] }}">
                 <a href="{{ route('get.user.get_product_detail', ['id' => $microphone['id'] ]) }}">
-                    @php
-                        $rand_microphone = rand(0,2);
-                    @endphp
-                    <img width="180" height="180" class=" lazyloaded" alt="{{ $microphone['name'] }}" src="{{ url('upload/product/'. $microphone['image'][$rand_microphone] )}}">
+                    <img width="180" height="180" class=" lazyloaded" alt="{{ $microphone['name'] }}" src="{{ url('upload/product/'. $microphone['image'][0] )}}">
                     <h3>{{ $microphone['name'] }}</h3>
                     <div class="price">
                         <strong>{{ number_format($microphone['price'] * ((100-$microphone['sale']) / 100) ,0,",",".") . 'đ' }}</strong>
