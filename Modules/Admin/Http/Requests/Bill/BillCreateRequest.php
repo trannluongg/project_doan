@@ -21,7 +21,6 @@ class BillCreateRequest extends RequestAbstract
     public function rules()
     {
         return [
-            'user'              => 'required|numeric|min:1',
             'username'          => 'required|string|max:50|min:5',
             'user_address'      => 'required|string|max:50|min:5',
             'user_phone'        => 'required|string|regex:/^[0-9]{2}[0-9]{8}$/',

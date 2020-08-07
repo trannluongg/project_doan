@@ -44,4 +44,4 @@ Route::get('/logout', 'Auth\LoginController@logout')->name('get.user.logout');
 
 Route::get('/ajax-search', 'AjaxController@getProductAjax');
 
-Route::post('/order', 'AjaxController@getProductAjax');
+Route::post('/order', 'BillController@order')->name('post.cart.order');

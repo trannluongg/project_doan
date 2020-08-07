@@ -4,6 +4,7 @@ import SidebarMenu from "../../components/sidebar_mobile";
 import $ from "jquery";
 import Toast from "../../toastr/toastr";
 import AjaxSearch from "../../components/ajax_search_product";
+import LoginAjax from "../../components/login_ajax";
 import 'jquery-modal';
 
 const Cart = {
@@ -16,6 +17,7 @@ const Cart = {
         this.amountChange();
         this.getProductRemoveToCart();
         AjaxSearch.init();
+        LoginAjax.init();
     },
 
     amountIncrease()
@@ -114,7 +116,7 @@ const Cart = {
     {
         if(res.data.length <= 0)
         {
-            $('#cart').html('');
+            $('#cart').html('<span class="d-block text-center mt-5 mb-5">Chưa có sản phẩm trong giỏ hàng. <a href="/" style="color: #ff9c00">Quay lại trang chủ!</a></span>');
         }
         if (flag) $('.amount-increase').attr('disabled', false);
         else $('.amount-reduction').attr('disabled', false);
@@ -183,7 +185,6 @@ const Cart = {
                 $('.loading-cart').fadeOut();
                 let $count = $('.countTotalCart');
                 $count.html(parseInt($count.html()) - 1);
-                console.log(res);
                 this.handelUpdateSuccess(res);
                 $element.parent().parent().parent().parent().remove();
             })

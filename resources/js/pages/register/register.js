@@ -2,6 +2,7 @@ import SidebarMenu from "../../components/sidebar_mobile";
 import 'jquery-validation'
 import axios from 'axios';
 import AjaxSearch from "../../components/ajax_search_product";
+import ShowCart from "../../components/show_cart";
 
 const Register = {
     init()
@@ -11,6 +12,7 @@ const Register = {
         this.register();
         this.inputFocusResetError();
         AjaxSearch.init();
+        ShowCart.init();
     },
 
     register()

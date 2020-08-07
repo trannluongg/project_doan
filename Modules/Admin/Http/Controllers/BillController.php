@@ -20,4 +20,9 @@ class BillController extends Controller
         $this->billService = $billService;
         parent::__construct();
     }
+
+    public function order()
+    {
+
+    }
 }

@@ -8,8 +8,10 @@ use Modules\Admin\SetField\BillDetailField;
 class BillDetail extends Model
 {
     public $prefix = 'bid';
-    protected $table = 'bill_detail';
+    protected $table = 'bill_details';
 
     public $fieldClass = BillDetailField::class;
+
+    protected $guarded = [];
 
 }
