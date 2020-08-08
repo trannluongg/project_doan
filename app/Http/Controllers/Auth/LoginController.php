@@ -38,7 +38,7 @@ class LoginController extends Controller
         return Socialite::driver('google')->redirect();
     }
 
-    public function loginGoogleCallback()
+    public function loginGoogleCallback(Request $request)
     {
         $response = $this->authService->registerGoogle();
         return redirect()->route('get.user.home');

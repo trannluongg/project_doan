@@ -11,8 +11,10 @@
     <div class="f-wrap">
         <div class="ghg-main">
             @if(isset($cart) && !empty($cart))
-                @include('pages.cart.include._cart')
-                @include('pages.cart.include._form')
+               <div id="cart">
+                   @include('pages.cart.include._cart')
+                   @include('pages.cart.include._form')
+               </div>
             @else
                 <span class="d-block text-center mt-5 mb-5">Chưa có sản phẩm trong giỏ hàng. <a href="/" style="color: #ff9c00">Quay lại trang chủ!</a></span>
             @endif

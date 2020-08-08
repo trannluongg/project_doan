@@ -2,7 +2,6 @@
     <p class="ghg-hds">GIỎ HÀNG CỦA BẠN <span>(<i class="countTotalCart">{{ count($cart->items) }}</i>  sản phẩm)</span></p>
     <a class="ghg-back" href="/" title="Trang chủ">Mua thêm sản phẩm khác</a>
 </div>
-<div id="cart">
     <div class="fs-ghlul clearfix">
         <div class="loading-cart">
             <img src="{{ url('images/loading_cart.gif')}}" alt="">
@@ -58,4 +57,3 @@
             </li>
         </ul>
     </div>
-</div>

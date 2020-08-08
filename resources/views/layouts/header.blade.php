@@ -45,7 +45,7 @@
             <div class="fs-search">
                 <form action="" method="get" autocomplete="off">
                     <input class="fs-stxt" type="text" name="" placeholder="Nhập tên điện thoại, máy tính, phụ kiện... cần tìm" autocomplete="off" maxlength="50">
-                    <button type="submit" class="search-button"><i class="ficon f-search"></i></button>
+                    <button type="submit" class="search-button"><i class="fa fa-search" aria-hidden="true"></i></button>
                     <div class="fs-sresult" style="display : block !important">
                         <div class="fs-sremain">
                             <ul class="wrap-suggestion">
