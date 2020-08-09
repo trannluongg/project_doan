@@ -11,6 +11,7 @@ namespace Modules\Admin\Transformers\User;
 
 use App\Models\User;
 use App\Transformers\Transformer;
+use Carbon\Carbon;
 use Modules\Admin\Transformers\Bill\BillTransformer;
 
 class UserTransformer extends Transformer
@@ -27,6 +28,7 @@ class UserTransformer extends Transformer
             'avatar'            => $user->avatar,
             'gender'            => $user->gender,
             'date_of_birth'     => $user->date_of_birth,
+            'age'               => $user->date_of_birth ? Carbon::parse(Carbon::createFromFormat('d/m/Y', $user->date_of_birth)->format('Y-m-d'))->age : null,
             'status'            => $user->status,
             'created_at'        => $user->created_at ? $user->created_at->toDateTimeString() : null,
             'updated_at'        => $user->updated_at ? $user->updated_at->toDateTimeString() : null,

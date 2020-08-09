@@ -17,157 +17,173 @@ mix.setPublicPath(path.normalize(directory_asset));
 new webpack.ContextReplacementPlugin(/\.\/locale$/, 'empty-module', false, /js$/);
 
 var build_js = [
+    // {
+    //     from: 'resources/js/slideshow/slideshow.js',
+    //     to: 'js/slideshow_index.js'
+    // },
+    // {
+    //     from: 'resources/js/slideshow/slideshow_product.js',
+    //     to: 'js/slideshow_product.js'
+    // },
+    // {
+    //     from: 'resources/js/slideshow/slideshow_search.js',
+    //     to: 'js/slideshow_search.js'
+    // },
+    // {
+    //     from: 'resources/js/pages/home/home.js',
+    //     to: 'js/home.js'
+    // },
+    // {
+    //     from: 'resources/js/pages/product/product.js',
+    //     to: 'js/product.js'
+    // },
+    // {
+    //     from: 'resources/js/pages/search/search_mobile.js',
+    //     to: 'js/search_mobile.js'
+    // },
+    // {
+    //     from: 'resources/js/pages/product_detail/product_detail.js',
+    //     to: 'js/product_detail.js'
+    // },
+    // {
+    //     from: 'resources/js/pages/user_info/user_info.js',
+    //     to: 'js/user_info.js'
+    // },
+    // {
+    //     from: 'resources/js/pages/register/register.js',
+    //     to: 'js/register.js'
+    // },
+    // {
+    //     from: 'resources/js/pages/login/login.js',
+    //     to: 'js/login.js'
+    // },
+    // {
+    //     from: 'resources/js/pages/cart/cart.js',
+    //     to: 'js/cart.js'
+    // },
+    // {
+    //     from: 'resources/js/pages/Admin/module_group/module_group.js',
+    //     to: 'js/module_group.js'
+    // },
+    // {
+    //     from: 'resources/js/pages/Admin/permission/permission.js',
+    //     to: 'js/permission.js'
+    // },
+    // {
+    //     from: 'resources/js/pages/Admin/module/module.js',
+    //     to: 'js/module.js'
+    // },
+    // {
+    //     from: 'resources/js/pages/Admin/role/role.js',
+    //     to: 'js/role.js'
+    // },
+    // {
+    //     from: 'resources/js/pages/Admin/producer/producer.js',
+    //     to: 'js/producer.js'
+    // },
+    // {
+    //     from: 'resources/js/pages/Admin/brand/brand.js',
+    //     to: 'js/brand.js'
+    // },
+    // {
+    //     from: 'resources/js/pages/Admin/category/category.js',
+    //     to: 'js/category.js'
+    // },
+    // {
+    //     from: 'resources/js/pages/Admin/product/product.js',
+    //     to: 'js/product.js'
+    // },
+    // {
+    //     from: 'resources/js/pages/Admin/user/user_admin.js',
+    //     to: 'js/user_admin.js'
+    // },
     {
-        from: 'resources/js/slideshow/slideshow.js',
-        to: 'js/slideshow_index.js'
+        from: 'resources/js/pages/Admin/bill/bill_admin.js',
+        to: 'js/bill_admin.js'
     },
-    {
-        from: 'resources/js/slideshow/slideshow_product.js',
-        to: 'js/slideshow_product.js'
-    },
-    {
-        from: 'resources/js/slideshow/slideshow_search.js',
-        to: 'js/slideshow_search.js'
-    },
-    {
-        from: 'resources/js/pages/home/home.js',
-        to: 'js/home.js'
-    },
-    {
-        from: 'resources/js/pages/product/product.js',
-        to: 'js/product.js'
-    },
-    {
-        from: 'resources/js/pages/search/search_mobile.js',
-        to: 'js/search_mobile.js'
-    },
-    {
-        from: 'resources/js/pages/product_detail/product_detail.js',
-        to: 'js/product_detail.js'
-    },
-    {
-        from: 'resources/js/pages/user_info/user_info.js',
-        to: 'js/user_info.js'
-    },
-    {
-        from: 'resources/js/pages/register/register.js',
-        to: 'js/register.js'
-    },
-    {
-        from: 'resources/js/pages/login/login.js',
-        to: 'js/login.js'
-    },
-    {
-        from: 'resources/js/pages/cart/cart.js',
-        to: 'js/cart.js'
-    },
-    {
-        from: 'resources/js/pages/Admin/module_group/module_group.js',
-        to: 'js/module_group.js'
-    },
-    {
-        from: 'resources/js/pages/Admin/permission/permission.js',
-        to: 'js/permission.js'
-    },
-    {
-        from: 'resources/js/pages/Admin/module/module.js',
-        to: 'js/module.js'
-    },
-    {
-        from: 'resources/js/pages/Admin/role/role.js',
-        to: 'js/role.js'
-    },
-    {
-        from: 'resources/js/pages/Admin/producer/producer.js',
-        to: 'js/producer.js'
-    },
-    {
-        from: 'resources/js/pages/Admin/brand/brand.js',
-        to: 'js/brand.js'
-    },
-    {
-        from: 'resources/js/pages/Admin/category/category.js',
-        to: 'js/category.js'
-    },
-    {
-        from: 'resources/js/pages/Admin/product/product.js',
-        to: 'js/product.js'
-    },
-    {
-        from: 'resources/js/pages/Admin/acc_admin/acc_admin.js',
-        to: 'js/acc_admin.js'
-    },
+    // {
+    //     from: 'resources/js/pages/Admin/acc_admin/acc_admin.js',
+    //     to: 'js/acc_admin.js'
+    // },
 ];
 
 let build_scss = [
+    // {
+    //     from: 'resources/sass/pages/home/home.scss',
+    //     to: 'css/home.css'
+    // },
+    // {
+    //     from: 'resources/sass/pages/product/product.scss',
+    //     to: 'css/product_user.css'
+    // },
+    // {
+    //     from: 'resources/sass/pages/search/search.scss',
+    //     to: 'css/search.css'
+    // },
+    // {
+    //     from: 'resources/sass/pages/product_detail/product_detail.scss',
+    //     to: 'css/product_detail.css'
+    // },
+    // {
+    //     from: 'resources/sass/pages/cart/cart.scss',
+    //     to: 'css/cart.css'
+    // },
+    // {
+    //     from: 'resources/sass/pages/user_info/user_info.scss',
+    //     to: 'css/user_info.css'
+    // },
+    // {
+    //     from: 'resources/sass/pages/register/register.scss',
+    //     to: 'css/register.css'
+    // },
+    // {
+    //     from: 'resources/sass/pages/login/login.scss',
+    //     to: 'css/login.css'
+    // },
+    // {
+    //     from: 'resources/sass/pages/Admin/module_group/module_group.scss',
+    //     to: 'css/module_group.css'
+    // },
+    // {
+    //     from: 'resources/sass/pages/Admin/permission/permission.scss',
+    //     to: 'css/permission.css'
+    // },
+    // {
+    //     from: 'resources/sass/pages/Admin/module/module.scss',
+    //     to: 'css/module.css'
+    // },
+    // {
+    //     from: 'resources/sass/pages/Admin/role/role.scss',
+    //     to: 'css/role.css'
+    // },
+    // {
+    //     from: 'resources/sass/pages/Admin/producer/producer.scss',
+    //     to: 'css/producer.css'
+    // },
+    // {
+    //     from: 'resources/sass/pages/Admin/brand/brand.scss',
+    //     to: 'css/brand.css'
+    // },
+    // {
+    //     from: 'resources/sass/pages/Admin/category/category.scss',
+    //     to: 'css/category.css'
+    // },
+    // {
+    //     from: 'resources/sass/pages/Admin/product/product.scss',
+    //     to: 'css/product.css'
+    // },
+    // {
+    //     from: 'resources/sass/pages/Admin/user/user_admin.scss',
+    //     to: 'css/user_admin.css'
+    // },
     {
-        from: 'resources/sass/pages/home/home.scss',
-        to: 'css/home.css'
+        from: 'resources/sass/pages/Admin/bill/bill_admin.scss',
+        to: 'css/bill_admin.css'
     },
-    {
-        from: 'resources/sass/pages/product/product.scss',
-        to: 'css/product_user.css'
-    },
-    {
-        from: 'resources/sass/pages/search/search.scss',
-        to: 'css/search.css'
-    },
-    {
-        from: 'resources/sass/pages/product_detail/product_detail.scss',
-        to: 'css/product_detail.css'
-    },
-    {
-        from: 'resources/sass/pages/cart/cart.scss',
-        to: 'css/cart.css'
-    },
-    {
-        from: 'resources/sass/pages/user_info/user_info.scss',
-        to: 'css/user_info.css'
-    },
-    {
-        from: 'resources/sass/pages/register/register.scss',
-        to: 'css/register.css'
-    },
-    {
-        from: 'resources/sass/pages/login/login.scss',
-        to: 'css/login.css'
-    },
-    {
-        from: 'resources/sass/pages/Admin/module_group/module_group.scss',
-        to: 'css/module_group.css'
-    },
-    {
-        from: 'resources/sass/pages/Admin/permission/permission.scss',
-        to: 'css/permission.css'
-    },
-    {
-        from: 'resources/sass/pages/Admin/module/module.scss',
-        to: 'css/module.css'
-    },
-    {
-        from: 'resources/sass/pages/Admin/role/role.scss',
-        to: 'css/role.css'
-    },
-    {
-        from: 'resources/sass/pages/Admin/producer/producer.scss',
-        to: 'css/producer.css'
-    },
-    {
-        from: 'resources/sass/pages/Admin/brand/brand.scss',
-        to: 'css/brand.css'
-    },
-    {
-        from: 'resources/sass/pages/Admin/category/category.scss',
-        to: 'css/category.css'
-    },
-    {
-        from: 'resources/sass/pages/Admin/product/product.scss',
-        to: 'css/product.css'
-    },
-    {
-        from: 'resources/sass/pages/Admin/acc_admin/acc_admin.scss',
-        to: 'css/acc_admin.css'
-    },
+    // {
+    //     from: 'resources/sass/pages/Admin/acc_admin/acc_admin.scss',
+    //     to: 'css/acc_admin.css'
+    // },
 ];
 /*
     Javascript

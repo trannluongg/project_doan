@@ -16,44 +16,44 @@
                 <li>
                     <span>Công nghệ màn hình:</span>
                     <div>
-                        {!! $screen['0'] !!}
+                        {!! $screen['0'] ?? 'Đang cập nhật' !!}
                     </div>
                 </li>
                 <li>
                     <span>Chuẩn màn hình:</span>
                     <div>
-                        {!! $screen['1'] !!}
+                        {!! $screen['1'] ?? 'Đang cập nhật' !!}
                     </div>
                 </li>
                 <li>
                     <span>Độ phân giải:</span>
-                    {!! $screen['2'] !!}
+                    {!! $screen['2'] ?? 'Đang cập nhật' !!}
                 </li>
                 <li>
                     <span>Màn hình:</span>
-                    <div>{!! $screen['3'] !!}</div>
+                    <div>{!! $screen['3'] ?? 'Đang cập nhật' !!}</div>
                 </li>
                 <li>
                     <span>Độ phân giải camera trước:</span>
                     <div>
-                        {!! $camera_before['0'] !!}
+                        {!! $camera_before['0'] ?? 'Đang cập nhật' !!}
                     </div>
                 </li>
                 <li>
                     <span>Thông tin khác camera trước:</span>
-                    <div>{!! $camera_before['1'] !!}</div>
+                    <div>{!! $camera_before['1'] ?? 'Đang cập nhật' !!}</div>
                 </li>
                 <li>
                     <span>Độ phân giải camera sau:</span>
-                    <div>{!! $camera_after['0'] !!}</div>
+                    <div>{!! $camera_after['0'] ?? 'Đang cập nhật' !!}</div>
                 </li>
                 <li>
                     <span>Quay phim camera sau:</span>
-                    <div>{!! $camera_after['1'] !!}</div>
+                    <div>{!! $camera_after['1'] ?? 'Đang cập nhật' !!}</div>
                 </li>
                 <li>
                     <span>Đèn flash:</span>
-                    <div>{!! $camera_after['2'] !!}</div>
+                    <div>{!! $camera_after['2'] ?? 'Đang cập nhật' !!}</div>
                 </li>
             </ul>
             @break
@@ -69,44 +69,44 @@
                 <li>
                     <span>Công nghệ màn hình:</span>
                     <div>
-                        {!! $screen['0'] !!}
+                        {!! $screen['0'] ?? 'Đang cập nhật' !!}
                     </div>
                 </li>
                 <li>
                     <span>Độ phân giải:</span>
                     <div>
-                        {!! $screen['1'] !!}
+                        {!! $screen['1'] ?? 'Đang cập nhật' !!}
                     </div>
                 </li>
                 <li>
                     <span>Kích thước màn hình:</span>
-                    <div>{!! $screen['2'] !!}</div>
+                    <div>{!! $screen['2'] ?? 'Đang cập nhật' !!}</div>
                 </li>
                 <li>
                     <span>Loại CPU:</span>
-                    <div>{!! $hardware['0'] !!}</div>
+                    <div>{!! $hardware['0'] ?? 'Đang cập nhật' !!}</div>
                 </li>
                 <li>
                     <span>Hệ điều hành:</span>
                     <div>
-                        {!! $hardware['1'] !!}
+                        {!! $hardware['1'] ?? 'Đang cập nhật' !!}
                     </div>
                 </li>
                 <li>
                     <span>Số nhân:</span>
-                    <div>{!! $hardware['2'] !!}</div>
+                    <div>{!! $hardware['2'] ?? 'Đang cập nhật' !!}</div>
                 </li>
                 <li>
                     <span>Tốc độ CPU</span>
-                    <div>{!! $hardware['3'] !!}</div>
+                    <div>{!! $hardware['3'] ?? 'Đang cập nhật' !!}</div>
                 </li>
                 <li>
                     <span>Chíp đồ họa:</span>
-                    <div>{!! $hardware['4'] !!}</div>
+                    <div>{!! $hardware['4'] ?? 'Đang cập nhật' !!}</div>
                 </li>
                 <li>
                     <span>Ram:</span>
-                    <div>{!! $hardware['5'] !!}</div>
+                    <div>{!! $hardware['5'] ?? 'Đang cập nhật' !!}</div>
                 </li>
             </ul>
             @break
@@ -122,44 +122,44 @@
                 <li>
                     <span>Hãng CPU</span>
                     <div>
-                        <div>{!! $cpu['0'] !!}</div>
+                        <div>{!! $cpu['0'] ?? 'Đang cập nhật' !!}</div>
                     </div>
                 </li>
                 <li>
                     <span>Công nghệ CPU:</span>
                     <div>
-                        <div>{!! $cpu['1'] !!}</div>
+                        <div>{!! $cpu['1'] ?? 'Đang cập nhật' !!}</div>
                     </div>
                 </li>
                 <li>
                     <span>Loại CPU:</span>
-                    <div>{!! $cpu['2'] !!}</div>
+                    <div>{!! $cpu['2'] ?? 'Đang cập nhật' !!}</div>
                 </li>
                 <li>
                     <span>Tốc độ CPU:</span>
-                    <div>{!! $cpu['3'] !!}</div>
+                    <div>{!! $cpu['3'] ?? 'Đang cập nhật' !!}</div>
                 </li>
                 <li>
                     <span>Tốc độ tối đa:</span>
                     <div>
-                        <div>{!! $cpu['4'] !!}</div>
+                        <div>{!! $cpu['4'] ?? 'Đang cập nhật' !!}</div>
                     </div>
                 </li>
                 <li>
                     <span>Bộ nhớ đệm:</span>
-                    <div>{!! $cpu['5'] !!}</div>
+                    <div>{!! $cpu['5'] ?? 'Đang cập nhật' !!}</div>
                 </li>
                 <li>
                     <span>Chip</span>
-                    <div>{!! $hardware['0'] !!}</div>
+                    <div>{!! $hardware['0'] ?? 'Đang cập nhật' !!}</div>
                 </li>
                 <li>
                     <span>Tốc độ bus:</span>
-                    <div>{!! $hardware['1'] !!}</div>
+                    <div>{!! $hardware['1'] ?? 'Đang cập nhật' !!}</div>
                 </li>
                 <li>
                     <span>Ram tối đa:</span>
-                    <div>{!! $hardware['2'] !!}</div>
+                    <div>{!! $hardware['2'] ?? 'Đang cập nhật' !!}</div>
                 </li>
             </ul>
             @break
@@ -171,40 +171,40 @@
             <li>
                 <span>Hiệu suất sạc</span>
                 <div>
-                    <div>{!! $data['0'] !!}</div>
+                    <div>{!! $data['0'] ?? 'Đang cập nhật' !!}</div>
                 </div>
             </li>
             <li>
                 <span>Dung lượng:</span>
                 <div>
-                    <div>{!! $data['1'] !!}</div>
+                    <div>{!! $data['1'] ?? 'Đang cập nhật' !!}</div>
                 </div>
             </li>
             <li>
                 <span>Thời gian sạc đầy:</span>
-                <div>{!! $data['2'] !!}</div>
+                <div>{!! $data['2'] ?? 'Đang cập nhật' !!}</div>
             </li>
             <li>
                 <span>Nguồn vào:</span>
-                <div>{!! $data['3'] !!}</div>
+                <div>{!! $data['3'] ?? 'Đang cập nhật' !!}</div>
             </li>
             <li>
                 <span>Lõi pin:</span>
                 <div>
-                    <div>{!! $data['4'] !!}</div>
+                    <div>{!! $data['4'] ?? 'Đang cập nhật' !!}</div>
                 </div>
             </li>
             <li>
                 <span>Kích thước:</span>
-                <div>{!! $data['5'] !!}</div>
+                <div>{!! $data['5'] ?? 'Đang cập nhật' !!}</div>
             </li>
             <li>
                 <span>Trọng lượng</span>
-                <div>{!! $data['6'] !!}</div>
+                <div>{!! $data['6'] ?? 'Đang cập nhật' !!}</div>
             </li>
             <li>
                 <span>Sản xuất:</span>
-                <div>{!! $data['7'] !!}</div>
+                <div>{!! $data['7'] ?? 'Đang cập nhật' !!}</div>
             </li>
         </ul>
             @break
@@ -216,40 +216,40 @@
             <li>
                 <span>Tương thích</span>
                 <div>
-                    <div>{!! $data['0'] !!}</div>
+                    <div>{!! $data['0'] ?? 'Đang cập nhật' !!}</div>
                 </div>
             </li>
             <li>
                 <span>Cổng sạc:</span>
                 <div>
-                    <div>{!! $data['1'] !!}</div>
+                    <div>{!! $data['1'] ?? 'Đang cập nhật' !!}</div>
                 </div>
             </li>
             <li>
                 <span>Công nghệ âm thanh:</span>
-                <div>{!! $data['2'] !!}</div>
+                <div>{!! $data['2'] ?? 'Đang cập nhật' !!}</div>
             </li>
             <li>
                 <span>Thời gian sử dụng:</span>
-                <div>{!! $data['3'] !!}</div>
+                <div>{!! $data['3'] ?? 'Đang cập nhật' !!}</div>
             </li>
             <li>
                 <span>Kết nối cùng lúc:</span>
                 <div>
-                    <div>{!! $data['4'] !!}</div>
+                    <div>{!! $data['4'] ?? 'Đang cập nhật' !!}</div>
                 </div>
             </li>
             <li>
                 <span>Khoảng cách kết nối:</span>
-                <div>{!! $data['5'] !!}</div>
+                <div>{!! $data['5'] ?? 'Đang cập nhật' !!}</div>
             </li>
             <li>
                 <span>Phím điều khiển</span>
-                <div>{!! $data['6'] !!}</div>
+                <div>{!! $data['6'] ?? 'Đang cập nhật' !!}</div>
             </li>
             <li>
                 <span>Trọng lượng:</span>
-                <div>{!! $data['7'] !!}</div>
+                <div>{!! $data['7'] ?? 'Đang cập nhật' !!}</div>
             </li>
         </ul>
             @break

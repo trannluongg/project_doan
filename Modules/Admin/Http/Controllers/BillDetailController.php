@@ -8,6 +8,7 @@
 
 namespace Modules\Admin\Http\Controllers;
 
+use Illuminate\Http\Request;
 use Modules\Admin\Services\BillDetailService;
 
 class BillDetailController extends Controller
@@ -18,5 +19,15 @@ class BillDetailController extends Controller
     {
         $this->billDetailService = $billDetailService;
         parent::__construct();
+    }
+
+    public function updateBillDetail(Request $request)
+    {
+        return $this->billDetailService->updateBillDetail($request);
+    }
+
+    public function removeProductBill(Request $request)
+    {
+        return $this->billDetailService->removeProductBillDetail($request);
     }
 }

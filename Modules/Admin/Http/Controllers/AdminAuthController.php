@@ -32,13 +32,17 @@ class AdminAuthController extends Controller
         {
             return redirect()->route('get.products.index');
         }
-
-        if (!empty(AuthMe::token('admins')) && JWTAuth::setToken(AuthMe::token('admins'))->toUser())
+        try{
+            if (!empty(AuthMe::token('admins')) && JWTAuth::setToken(AuthMe::token('admins'))->toUser())
+            {
+                return redirect()->route('get.products.index');
+            }
+        } catch (\Tymon\JWTAuth\Exceptions\TokenExpiredException $e)
         {
-            return redirect()->route('get.products.index');
+            return view('admin::login');
         }
 
-        return view('admin::login');
+         return view('admin::login');
     }
 
     public function postLogin(AdminLoginRequest $request)

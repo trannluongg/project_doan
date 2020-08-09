@@ -11,6 +11,7 @@ class Bills extends Model
     protected $table = 'bills';
 
     public $fieldClass = BillField::class;
+    public $fieldClass_v2   = \App\SetField\BillField::class;
 
     public $relationships = [
         'bill_user'         => User::class,
@@ -26,6 +27,6 @@ class Bills extends Model
 
     public function bill_detail()
     {
-        return $this->hasMany(BillDetail::class, 'bid_bill_id');
+        return $this->hasMany(BillDetail::class, 'bid_bill_id', 'id');
     }
 }

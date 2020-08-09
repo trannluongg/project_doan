@@ -11,8 +11,8 @@
                         </a>
                         <div class="dropdown-menu-user">
                             <ul>
-                                <li><a href="">Thông tin tài khoản</a></li>
-                                <li><a href="">Đơn hàng</a></li>
+                                <li><a href="{{ route('get.user.get_info') }}">Thông tin tài khoản</a></li>
+                                <li><a href="{{ route('get.user.get_purchase', ['id' => $user->id]) }}">Đơn hàng</a></li>
                                 <li><a href="{{ route('get.user.logout', ['token' => \App\Core123\Auth\AuthMe::token('users')]) }}">Đăng xuất</a></li>
                             </ul>
                         </div>
@@ -43,7 +43,7 @@
                 </li>
             </ul>
             <div class="fs-search">
-                <form action="" method="get" autocomplete="off">
+                <form action="{{ route('get.user.search') }}" method="get" autocomplete="off">
                     <input class="fs-stxt" type="text" name="" placeholder="Nhập tên điện thoại, máy tính, phụ kiện... cần tìm" autocomplete="off" maxlength="50">
                     <button type="submit" class="search-button"><i class="fa fa-search" aria-hidden="true"></i></button>
                     <div class="fs-sresult" style="display : block !important">
@@ -69,8 +69,8 @@
                             <span>{{ $user->name }}</span>
                         </a>
                     </li>
-                    <li><a href="">Thông tin tài khoản</a></li>
-                    <li><a href="">Đơn hàng</a></li>
+                    <li><a href="{{ route('get.user.get_info') }}">Thông tin tài khoản</a></li>
+                    <li><a href="{{ route('get.user.get_purchase', ['id' => $user->id]) }}">Đơn hàng</a></li>
                     <li><a href="{{ route('get.user.logout', ['token' => \App\Core123\Auth\AuthMe::token('users')]) }}">Đăng xuất</a></li>
                 @else
                     <li>

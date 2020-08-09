@@ -20,12 +20,12 @@ class BillTransformer extends Transformer
     {
         $data = [
             'id'                => $bills->id,
-            'user'              => $bills->user,
-            'username'          => $bills->username,
-            'user_address'      => $bills->user_address,
-            'user_phone'        => $bills->user_phone,
-            'sum_money'         => $bills->sum_money,
-            'status'            => $bills->status,
+            'user'              => $bills->bil_user,
+            'username'          => $bills->bil_username,
+            'user_address'      => $bills->bil_user_address,
+            'user_phone'        => $bills->bil_user_phone,
+            'sum_money'         => $bills->bil_sum_money,
+            'status'            => $bills->bil_status,
             'created_at'        => $bills->created_at ? $bills->created_at->toDateTimeString() : null,
             'updated_at'        => $bills->updated_at ? $bills->updated_at->toDateTimeString() : null,
         ];

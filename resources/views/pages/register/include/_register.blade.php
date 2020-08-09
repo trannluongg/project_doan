@@ -1,6 +1,6 @@
 <div class="login register">
     <div class="login-title"><h3>Tạo tài khoản Website</h3>
-        <div class="login-other"><span>Bạn đã là thành viên? <a href="/user/login">Đăng nhập</a> tại đây</span></div>
+        <div class="login-other"><span>Bạn đã là thành viên? <a href="{{ route('get.user.login') }}">Đăng nhập</a> tại đây</span></div>
     </div>
     <div>
         <form id="form-register">
@@ -101,10 +101,10 @@
                         <div class="mod-third-party-login mod-third-party-login-in-two-lines">
                             <div class="mod-third-party-login-line"><span></span></div>
                             <div class="mod-third-party-login-bd">
-                                <button
-                                    class="mod-button mod-button mod-third-party-login-btn mod-third-party-login-fb">
-                                    Facebook
-                                </button>
+{{--                                <button--}}
+{{--                                    class="mod-button mod-button mod-third-party-login-btn mod-third-party-login-fb">--}}
+{{--                                    Facebook--}}
+{{--                                </button>--}}
                                 <button
                                     class="mod-button mod-button mod-third-party-login-btn mod-third-party-login-google">
                                     Google

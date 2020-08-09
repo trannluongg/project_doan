@@ -11,6 +11,7 @@ namespace App\Services;
 
 use App\Core123\Auth\AuthMe;
 use App\Http\Requests\UserRegisterRequest;
+use App\Http\Requests\UserUpdateRequest;
 use App\Models\Authorization;
 use App\Repository\User\UserRepositoryInterface;
 use App\Service\BaseService;
@@ -146,5 +147,67 @@ class AuthService extends BaseService
 
             return $this->responseError(['error' => 'Error'], 'Error', Response::HTTP_NOT_FOUND);
         }
+    }
+
+    public function updateInfo(UserUpdateRequest $request, $id)
+    {
+        $data['email']          = $request->get('email');
+        $data['phone']          = $request->get('phone');
+        $data['name']           = $request->get('name');
+        $data['date_of_birth']  = $request->get('day') .'/'.$request->get('month').'/'.$request->get('year');
+        $data['gender']         = intval($request->get('gender'));
+        $data['address']        = $request->get('address');
+        $data['password']       = Hash::make($request->get('password'));
+
+        $user = $this->userRepository->firstById(intval($id));
+
+        if (!$user) return $this->responseErrorNotFound();
+
+        $this->userRepository->updateById($id, $data);
+
+        return $this->responseSuccess([], trans('messages.update_success'), Response::HTTP_OK);
+    }
+
+    public function updatePassword(Request $request, $id)
+    {
+        $data['password']       = Hash::make($request->get('password'));
+
+        $user = $this->userRepository->firstById(intval($id));
+
+        if (!$user) return $this->responseErrorNotFound();
+
+        $this->userRepository->updateById($id, $data);
+
+        return $this->responseSuccess([], trans('messages.update_success'), Response::HTTP_OK);
+    }
+
+    public function updateAvatar(Request $request, $id)
+    {
+        $user = $this->userRepository->firstById($id);
+
+        if (!$user) return $this->responseErrorNotFound();
+
+        if ($request->hasFile('avatar'))
+        {
+            $file      = $request->file('avatar');
+
+            $name = $file->getClientOriginalName();
+
+            $name_image = Carbon::now()->timestamp . "_" . $name;
+
+            $file->move("upload/avatar", $name_image);
+
+            if ($user->avatar != 'male.png' && $user->avatar != 'female.png') unlink("upload/avatar/". $user->avatar);
+
+            $data['avatar'] = $name_image;
+        }
+        else
+        {
+            $data['avatar'] = $user->avatar;
+        }
+
+        $this->userRepository->updateById($id, $data);
+
+        return $this->responseSuccess([], trans('messages.update_success'), Response::HTTP_OK);
     }
 }

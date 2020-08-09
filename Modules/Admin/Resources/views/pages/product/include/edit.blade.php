@@ -41,7 +41,7 @@
                 <label for="" style="font-weight: 500">Producer</label>
                 <select class="form-control js-select2" id="producer-pro-edit">
                     @foreach($data_producer as $p)
-                        <option value="{{ $p['id'] }}" data-image="{{ $p['avatar'] }}">{{ $p['name'] }}</option>
+                        <option value="{{ $p['id'] }}" data-image="{{ url('upload/producer/'.$p['avatar']) }}">{{ $p['name'] }}</option>
                     @endforeach
                 </select>
             </div>

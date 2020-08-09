@@ -210,4 +210,28 @@ class ProductService extends BaseService
 
         return $this->responseDataCollection($product, ProductTransformer::class);
     }
+
+    public function getListProductSearch(Request $request)
+    {
+
+        $price_sort = $request->get('price_sort') ?? 2;
+        $price_sort = (intval($price_sort) == 0) ? 2 : $price_sort;
+
+        if ($price_sort == 1) $order = [['price', 'desc']];
+        else $order = [['price', 'asc']];
+
+        $filter     = [
+            'flag_field'    => true,
+            'limit'         => 32,
+            'order'         => $order,
+            'pro_producer'  => $request->get('producer') ?? null,
+            'pro_price'     => $request->get('price') ?? null
+        ];
+
+        $fields     = 'name,price,image,sale,description,promotion,total,brand,category,producer,created_at';
+
+        $products      = $this->productRepository->getList($filter,$fields);
+
+        return $this->responseDataCollection($products, ProductTransformer::class);
+    }
 }

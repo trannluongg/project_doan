@@ -13,5 +13,5 @@ use App\Core123\RepositoryInterface;
 
 interface BillDetailRepositoryInterface extends RepositoryInterface
 {
-
+    public function getBillDetailWithBillId($bill_id = null);
 }

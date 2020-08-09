@@ -29,10 +29,10 @@
                                 <div class="mod-third-party-login mod-login-third-btns">
                                     <div class="mod-third-party-login-line"><span>Hoặc, đăng nhập bằng</span></div>
                                     <div class="mod-third-party-login-bd">
-                                        <a href="{{ route('get.user.login_facebook') }}"
-                                           class="mod-button mod-third-party-login-fb">
-                                            Facebook
-                                        </a>
+{{--                                        <a href="{{ route('get.user.login_facebook') }}"--}}
+{{--                                           class="mod-button mod-third-party-login-fb">--}}
+{{--                                            Facebook--}}
+{{--                                        </a>--}}
                                         <a href="{{ route('get.user.login_google') }}"
                                            class="mod-button mod-third-party-login-google">
                                             Google

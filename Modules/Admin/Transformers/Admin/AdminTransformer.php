@@ -29,7 +29,7 @@ class AdminTransformer extends Transformer
             'status'        => $admin->status,
             'address'       => $admin->address,
             'priority'      => $admin->priority,
-            'avatar'        => $admin->avatar ? 'http://127.0.0.1:8000/upload/avatar/' . $admin->avatar : null,
+            'avatar'        => $admin->avatar ? 'http://doan.abc/upload/avatar/' . $admin->avatar : null,
             'created_at'    => $admin->created_at ? $admin->created_at->toDateTimeString() : null,
             'updated_at'    => $admin->updated_at ? $admin->updated_at->toDateTimeString() : null,
         ];

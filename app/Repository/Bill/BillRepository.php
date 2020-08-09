@@ -18,4 +18,9 @@ class BillRepository extends EloquentRepository implements BillRepositoryInterfa
     {
         $this->model = $bills;
     }
+
+    public function getBillWithUser($user_id = null)
+    {
+        return $this->model->where('bil_user', $user_id)->orderBy('id', 'desc')->get();
+    }
 }

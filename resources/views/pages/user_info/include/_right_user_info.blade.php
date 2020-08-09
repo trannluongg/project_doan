@@ -9,143 +9,126 @@
             </div>
             <div class="my-account-profile">
                 <div class="my-account-profile__left">
-                    <div class="input-with-label">
-                        <div class="input-with-label__wrapper">
-                            <div class="input-with-label__label"><label>Tên đăng nhập</label></div>
-                            <div class="input-with-label__content">
-                                <div class="my-account__inline-container">
-                                    <div class="my-account__input-text">tranluong150499</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="input-with-label">
-                        <div class="input-with-label__wrapper">
-                            <div class="input-with-label__label"><label>Tên</label></div>
-                            <div class="input-with-label__content">
-                                <div class="input-with-validator-wrapper">
-                                    <div class="input-with-validator"><input type="text" placeholder="" value=""></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="input-with-label">
-                        <div class="input-with-label__wrapper">
-                            <div class="input-with-label__label"><label>Email</label></div>
-                            <div class="input-with-label__content">
-                                <div class="input-with-validator-wrapper">
-                                    <div class="input-with-validator"><input type="text" placeholder="" value=""></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="input-with-label">
-                        <div class="input-with-label__wrapper">
-                            <div class="input-with-label__label"><label>Số điện thoại</label></div>
-                            <div class="input-with-label__content">
-                                <div class="input-with-validator-wrapper">
-                                    <div class="input-with-validator"><input type="text" placeholder="" value=""></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="input-with-label">
-                        <div class="input-with-label__wrapper">
-                            <div class="input-with-label__label"><label>Tên Shop</label></div>
-                            <div class="input-with-label__content">
-                                <div class="input-with-validator-wrapper">
-                                    <div class="input-with-validator"><input type="text" placeholder=""
-                                                                             value="tranluong150499"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="input-with-label">
-                        <div class="input-with-label__wrapper">
-                            <div class="input-with-label__label"><label>Giới tính</label></div>
-                            <div class="input-with-label__content">
-                                <div class="my-account-profile__gender">
-                                    <div class="stardust-radio-group">
-                                        <div class="stardust-radio">
-                                            <div class="stardust-radio-button">
-                                                <div class="stardust-radio-button__outer-circle">
-                                                    <div class="stardust-radio-button__inner-circle"></div>
-                                                </div>
-                                            </div>
-                                            <div class="stardust-radio__content">
-                                                <div class="stardust-radio__label">Nam</div>
-                                            </div>
+                    <input type="hidden" id="user-id" value="{{ $user->id }}">
+                    <form id="update-info">
+                        <div class="input-with-label">
+                            <div class="input-with-label__wrapper">
+                                <div class="input-with-label__label"><label>Tên</label></div>
+                                <div class="input-with-label__content">
+                                    <div class="input-with-validator-wrapper">
+                                        <div class="input-with-validator">
+                                            <input type="text" name="name" id="name" data-error="#error-name" placeholder="Nhập tên" value="{{ $user->name }}">
                                         </div>
-                                        <div class="stardust-radio">
-                                            <div class="stardust-radio-button">
-                                                <div class="stardust-radio-button__outer-circle">
-                                                    <div class="stardust-radio-button__inner-circle"></div>
-                                                </div>
-                                            </div>
-                                            <div class="stardust-radio__content">
-                                                <div class="stardust-radio__label">Nữ</div>
-                                            </div>
+                                        <div id="error-name"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-with-label">
+                            <div class="input-with-label__wrapper">
+                                <div class="input-with-label__label"><label>Email</label></div>
+                                <div class="input-with-label__content">
+                                    <div class="input-with-validator-wrapper">
+                                        <div class="input-with-validator">
+                                            <input type="email" name="email" id="email" data-error="#error-email" placeholder="Nhập email" value="{{ $user->email }}">
                                         </div>
-                                        <div class="stardust-radio">
-                                            <div class="stardust-radio-button">
-                                                <div class="stardust-radio-button__outer-circle">
-                                                    <div class="stardust-radio-button__inner-circle"></div>
-                                                </div>
-                                            </div>
-                                            <div class="stardust-radio__content">
-                                                <div class="stardust-radio__label">Khác</div>
-                                            </div>
+                                        <div id="error-email"></div>
+                                        <div id="email-error-server"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-with-label">
+                            <div class="input-with-label__wrapper">
+                                <div class="input-with-label__label"><label>Số điện thoại</label></div>
+                                <div class="input-with-label__content">
+                                    <div class="input-with-validator-wrapper">
+                                        <div class="input-with-validator">
+                                            <input type="text" name="phone" id="phone" placeholder="Nhập phone" data-error="#error-phone" value="{{ $user->phone }}">
+                                        </div>
+                                        <div id="error-phone"></div>
+                                        <div id="phone-error-server"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-with-label">
+                            <div class="input-with-label__wrapper">
+                                <div class="input-with-label__label"><label>Địa chỉ</label></div>
+                                <div class="input-with-label__content">
+                                    <div class="input-with-validator-wrapper">
+                                        <div class="input-with-validator">
+                                            <input type="text" name="address" id="address" placeholder="Nhập địa chỉ" data-error="#error-address" value="{{ $user->address }}">
+                                        </div>
+                                        <div id="error-address"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-with-label">
+                            <div class="input-with-label__wrapper">
+                                <div class="input-with-label__label"><label>Giới tính</label></div>
+                                <div class="input-with-label__content">
+                                    <div class="my-account-profile__gender">
+                                        <div class="stardust-radio-group">
+                                            <input type="radio" id="male" name="gender" value="2" {{ ($user->gender ?? 1) == 2 ? 'checked' : '' }}>
+                                            <label for="male">Nữ</label><br>
+                                            <input type="radio" id="female" name="gender" value="1" {{ ($user->gender ?? 1) == 1 ? 'checked' : '' }}>
+                                            <label for="female">Nam</label><br>
+                                            <input type="radio" id="other" name="gender" value="0" {{ ($user->gender ?? 1) == 0 ? 'checked' : '' }}>
+                                            <label for="other">Khác</label>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="input-with-label">
-                        <div class="input-with-label__wrapper">
-                            <div class="input-with-label__label"><label>Ngày sinh</label></div>
-                            <div class="input-with-label__content">
-                                <div class="_2AC_Jd">
-                                    <div class="shopee-dropdown shopee-dropdown--has-selected">
-                                        <select name="" id="day">
-                                            <option value="">1</option>
-                                        </select>
-                                    </div>
-                                    <div class="shopee-dropdown shopee-dropdown--has-selected">
-                                        <select name="" id="month">
-                                            <option value="">1</option>
-                                        </select>
-                                    </div>
-                                    <div class="shopee-dropdown shopee-dropdown--has-selected">
-                                        <select name="" id="year">
-                                            <option value="">1990</option>
-                                        </select>
+                        <div class="input-with-label">
+                            @php
+                                $date_of_birth = $user->date_of_birth;
+                                $date_of_birth = explode('/', $date_of_birth);
+                            @endphp
+                            <div class="input-with-label__wrapper">
+                                <div class="input-with-label__label"><label>Ngày sinh</label></div>
+                                <div class="input-with-label__content">
+                                    <div class="_2AC_Jd">
+                                        <div class="shopee-dropdown shopee-dropdown--has-selected">
+                                            <select name="day" id="">
+                                                @for($i = 1; $i < 32; $i++)
+                                                    <option value="{{ $i }}" {{ (($date_of_birth[0] ?? 1) == $i ? 'selected' : '') }}>{{ $i }}</option>
+                                                @endfor
+                                            </select>
+                                        </div>
+                                        <div class="shopee-dropdown shopee-dropdown--has-selected">
+                                            <select name="month" id="month">
+                                                @for($i = 1; $i <= 12; $i++)
+                                                    <option value="{{ $i }}" {{ (($date_of_birth[1] ?? 1) == $i ? 'selected' : '') }}>{{ $i }}</option>
+                                                @endfor
+                                            </select>
+                                        </div>
+                                        <div class="shopee-dropdown shopee-dropdown--has-selected">
+                                            <select name="year" id="year">
+                                                @for($i = 1970; $i <= 2020; $i++)
+                                                    <option value="{{ $i }}" {{ (($date_of_birth[2] ?? 1970) == $i ? 'selected' : '') }}>{{ $i }}</option>
+                                                @endfor
+                                            </select>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="my-account-page__submit">
-                        <button type="button" class="btn btn-solid-primary btn--m btn--inline" aria-disabled="false">
-                            Lưu
-                        </button>
-                    </div>
+                        <div class="my-account-page__submit">
+                            <button type="button" class="btn btn-solid-primary btn--m btn--inline" id="btn-update-info">
+                                Lưu
+                            </button>
+                        </div>
+                    </form>
                 </div>
                 <div class="my-account-profile__right">
                     <div class="avatar-uploader">
                         <div class="avatar-uploader__avatar">
-                            <div class="avatar-uploader__placeholder">
-                                <svg class="shopee-svg-icon icon-headshot" enable-background="new 0 0 15 15"
-                                     viewBox="0 0 15 15" x="0" y="0">
-                                    <g>
-                                        <circle cx="7.5" cy="4.5" fill="none" r="3.8" stroke-miterlimit="10"></circle>
-                                        <path d="m1.5 14.2c0-3.3 2.7-6 6-6s6 2.7 6 6" fill="none" stroke-linecap="round"
-                                              stroke-miterlimit="10"></path>
-                                    </g>
-                                </svg>
-                            </div>
+                            <img src="{{ url('upload/avatar/' . $user->avatar) }}" alt="{{ $user->name }}">
                         </div>
-                        <input class="avatar-uploader__file-input" type="file" accept=".jpg,.jpeg,.png">
+                        <input class="avatar-uploader__file-input" id="avatar-update" type="file" accept=".jpg,.jpeg,.png">
                         <button type="button" class="btn btn-light btn--m btn--inline">Chọn ảnh</button>
                         <div class="avatar-uploader__text-container">
                             <div class="avatar-uploader__text">Dụng lượng file tối đa 1 MB</div>
@@ -154,9 +137,6 @@
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="purchase-list-page__checkout-list-card-container">
-            @include('pages.user_info.include._user_info_order')
         </div>
     </div>
 </div>

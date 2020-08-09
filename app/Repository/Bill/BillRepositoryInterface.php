@@ -13,5 +13,5 @@ use App\Core123\RepositoryInterface;
 
 interface BillRepositoryInterface extends RepositoryInterface
 {
-
+    public function getBillWithUser($user_id = null);
 }

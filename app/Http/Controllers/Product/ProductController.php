@@ -76,4 +76,11 @@ class ProductController extends Controller
         $this->productService->getReduceByOne($id);
         return Session::has('cart') ? json_encode(Session::get('cart')) : json_encode( []);
     }
+
+    public function buyNow(Request $request, $id)
+    {
+        $add = $this->productService->addToCart($request, $id);
+        if ($add) return redirect()->route('get.cart.get_cart');
+        else abort(404);
+    }
 }

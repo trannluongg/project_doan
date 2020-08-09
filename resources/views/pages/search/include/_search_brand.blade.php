@@ -8,19 +8,12 @@
             <div id="mCSB_1" class="mCustomScrollBox mCS-light mCSB_vertical mCSB_inside">
                 <div id="mCSB_1_container" class="mCSB_container">
                     <ul class="listfilterv4  filterBrand" data-query="hang-san-xuat">
-                        <li><a href="" title="Tất cả">Tất cả</a></li>
-                        <li><a href="">Apple (iPhone)</a></li>
-                        <li><a href="">Samsung</a></li>
-                        <li><a href="">OPPO</a></li>
-                        <li><a href="">Vsmart</a></li>
-                        <li><a href="">Xiaomi</a></li>
-                        <li><a href="">Realme</a></li>
-                        <li><a href="">Vivo</a></li>
-                        <li><a href="">Nokia</a></li>
-                        <li><a href="">Huawei</a></li>
-                        <li><a href="">Masstel</a></li>
-                        <li><a href="">Itel</a></li>
-                        <li><a href="">Energizer</a></li>
+                        @foreach($producers as $producer)
+                            <li>
+                                <input type="radio" id="producer-{{ $producer['id'] }}" name="producer" {{ request('producer') == $producer['id'] ? 'checked' : ''}} value="{{ $producer['id'] }}">
+                                <label for="producer-{{ $producer['id'] }}">{{ $producer['name'] }}</label><br>
+                            </li>
+                        @endforeach
                     </ul>
                 </div>
             </div>

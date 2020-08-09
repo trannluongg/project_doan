@@ -18,4 +18,9 @@ class BillDetailRepository extends EloquentRepository implements BillDetailRepos
     {
         $this->model = $billDetail;
     }
+
+    public function getBillDetailWithBillId($bill_id = null)
+    {
+        return $this->model->where('bid_bill_id', $bill_id)->get(['bid_product_id','bid_product_quantity']);
+    }
 }

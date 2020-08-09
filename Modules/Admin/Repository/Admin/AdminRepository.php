@@ -48,7 +48,7 @@ class AdminRepository extends EloquentRepository implements AdminRepositoryInter
 
         if ($id)                $query->where('admins.id', $id);
         if ($name)              $query->where('admins.name', $name);
-        if ($email)             $query->where('admins.guard_name', $email);
+        if ($email)             $query->where('admins.email', $email);
         if ($status)            $query->where('admins.status', $status);
 
         return  $query;

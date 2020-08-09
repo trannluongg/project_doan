@@ -17,5 +17,6 @@
 @section('script')
     <script type="text/javascript">
         <?= file_get_contents('assets/js/slideshow_search.js');?>
+        <?= file_get_contents('assets/js/search_mobile.js');?>
     </script>
 @stop

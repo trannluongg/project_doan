@@ -49,9 +49,9 @@
             </div>
         </div>
         <figure>
-            <h2><a href="/tin-tuc">Tin công nghệ</a></h2>
+            <h2><a href="/tin-tuc">Khuyến mại sốc</a></h2>
             <b></b>
-            <a id="b_11725" title="Vina Tặng 20% giá trị nạp thẻ - 05/06" href="https://www.thegioididong.com/sim-so-dep" class="liveevent card" target="_blank" rel="noopener"><span id="dot"><span class="ping"></span></span><span class="text"><strong>Vina TẶNG 20%</strong> giá trị thẻ nạp - 05/06</span></a>
+            <a id="b_11725" title="Khuyến mại sốc" href="javascript:void(0)" class="liveevent card" rel="noopener"><span id="dot"><span class="ping"></span></span><span class="text"><strong>HL Shop.com</strong> đang có khuyến mại sốc</span></a>
         </figure>
     </div>
     <div class="fs-asright">
@@ -69,11 +69,11 @@
         </ul>
         <div class="fs-asnews">
             <div class="fs-asntit">
-                <h3>TIN CÔNG NGHỆ NỔI BẬT</h3> <a href="/tin-tuc" target="_blank" title="">Xem tất cả</a>
+                <h3>TIN LIÊN KẾT CÔNG NGHỆ NỔI BẬT</h3> <a href="https://fptshop.com.vn/tin-tuc/tin-khuyen-mai" target="_blank" title="">Xem tất cả</a>
             </div>
             <ul>
                 <li>
-                    <a class="clearfix" href="">
+                    <a class="clearfix" href="https://fptshop.com.vn/tim-kiem/OPPO-A92-ra-m%E1%BA%AFt-t%E1%BA%A1i-Vi%E1%BB%87t-Nam-Thi%E1%BA%BFt-k%E1%BA%BF-hi%E1%BB%87n-%C4%91%E1%BA%A1i-p/tin-tuc">
                     <span>
                         <img class="lazy" src="{{ url('images/post/post_one.jpeg') }}">
                     </span>
@@ -81,8 +81,7 @@
                     </a>
                 </li>
                 <li>
-                    <a class="clearfix"
-                       href="" title="">
+                    <a class="clearfix" href="https://fptshop.com.vn/tin-tuc/danh-gia/can-canh-samsung-galaxy-a21s-4-camera-pin-trau-5000mah-chip-moi-exynos-850-121141" title="">
                     <span>
                         <img class="lazy" src="{{ url('images/post/post_two.jpg') }}">
                     </span>

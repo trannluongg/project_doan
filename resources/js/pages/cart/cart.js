@@ -6,6 +6,7 @@ import Toast from "../../toastr/toastr";
 import AjaxSearch from "../../components/ajax_search_product";
 import LoginAjax from "../../components/login_ajax";
 import 'jquery-modal';
+import 'jquery-validation';
 
 const Cart = {
     init()
@@ -18,11 +19,14 @@ const Cart = {
         this.getProductRemoveToCart();
         AjaxSearch.init();
         LoginAjax.init();
+        this.validateForm();
+        this.postOrder();
     },
 
     amountIncrease()
     {
         let that = this;
+
         $('.amount-increase').click(function ()
         {
 
@@ -191,8 +195,87 @@ const Cart = {
             .catch(err => {
                 console.log(err);
             })
-    }
+    },
 
+    postOrder()
+    {
+        $('#ubtn-order').click( () =>
+        {
+            let $form = $('#gh-form');
+
+            if (!$form.valid()) return false;
+
+        });
+    },
+
+    validateForm()
+    {
+        $.validator.setDefaults({
+            debug: true,
+            success: "valid"
+        });
+
+        $.validator.addMethod(
+            "regex",
+            function(value, element, regexp) {
+                let re = new RegExp(regexp);
+                return this.optional(element) || re.test(value);
+            },
+            "Không hợp lệ"
+        );
+
+        $('#gh-form').validate({
+            onsubmit: false,
+            rules: {
+                name: {
+                    required: true,
+                    minlength: 5,
+                    maxlength: 255
+                },
+                phone: {
+                    required: true,
+                    maxlength: 10,
+                    regex: "^((09|03|07|08|05)+([0-9]{8})\\b)$"
+                },
+                address: {
+                    required: true,
+                    minlength: 5,
+                    maxlength: 255
+                },
+            },
+            messages: {
+                name: {
+                    required: 'Họ tên không được để trống',
+                    minlength: 'Họ tên phải có ít nhất 5 kí tự',
+                    maxlength: 'Họ tên không được nhiều hơn 255 kí tự'
+                },
+                phone: {
+                    required: 'Số điện thoại không được để trống',
+                    maxlength: 'Số điện thoại không được nhiều hơn 10 kí tự',
+                    regex: 'Số điện thoại không đúng định dạng'
+                },
+                address: {
+                    required: 'Địa chỉ không được để trống',
+                    minlength: 'Địa chỉ phải có ít nhất 5 kí tự',
+                    maxlength: 'Địa chỉ không được nhiều hơn 255 kí tự'
+                }
+            },
+            errorPlacement: function (error, element)
+            {
+                let placement = $(element).data('error');
+                if (placement)
+                    $(placement).append(error);
+                else
+                    error.insertAfter(element);
+
+            },
+            submitHandler: function(form)
+            {
+                if ($(form).valid()) form.submit();
+                return false;
+            }
+        });
+    },
 };
 
 $(function () {

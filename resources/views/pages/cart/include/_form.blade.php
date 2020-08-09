@@ -6,20 +6,22 @@
             <li>
                 <label>Họ và tên: <sup>*</sup></label>
                 <div>
-                    <input type="text" name="name" id="uname" placeholder="Nhập họ và tên" value="{{ $user->name ?? ''}}" required>
+                    <input type="text" name="name" id="name" data-error="#error-name" placeholder="Nhập họ và tên" value="{{ $user->name ?? ''}}" required>
+                    <div id="error-name"></div>
                 </div>
             </li>
             <li>
                 <label>Số điện thoại: <sup>*</sup></label>
                 <div>
-                    <input type="text" name="phone" id="uphone" placeholder="Nhập số điện thoại" value="{{ $user->phone ?? '' }}" required>
+                    <input type="text" name="phone" id="phone" data-error="#error-phone" placeholder="Nhập số điện thoại" value="{{ $user->phone ?? '' }}" required>
+                    <div id="error-phone"></div>
                 </div>
             </li>
             <li>
                 <label>Address: <sup>*</sup></label>
                 <div>
-                    <input type="text" name="address" id="uaddress" placeholder="Nhập địa chỉ" value="{{ $user->address ?? '' }}" required>
-                    {{--                    <p class="gh-popfm-nt">Chi tiết đơn hàng sẽ được gửi vào email</p>--}}
+                    <input type="text" name="address" id="address" data-error="#error-address" placeholder="Nhập địa chỉ" value="{{ $user->address ?? '' }}" required>
+                    <div id="error-address"></div>
                 </div>
             </li>
         @else
@@ -36,10 +38,10 @@
                 </div>
             </li>
             <li>
-                <label>Email: <span>(không bắt buộc)</span></label>
+                <label>Address: <sup>*</sup></label>
                 <div>
-                    <input type="text" name="uemail" id="uemail" placeholder="Nhập email">
-{{--                    <p class="gh-popfm-nt">Chi tiết đơn hàng sẽ được gửi vào email</p>--}}
+                    <input type="text" name="address" id="uaddress" placeholder="Nhập địa chỉ" value="{{ $user->address ?? '' }}" required>
+                    {{--                    <p class="gh-popfm-nt">Chi tiết đơn hàng sẽ được gửi vào email</p>--}}
                 </div>
             </li>
         @endif
@@ -49,7 +51,7 @@
                 <div class="gfhrows">
                     <p>
                         @if($user)
-                            <button type="submit" class="fs-ghggbtn" id="ubtn">
+                            <button type="submit" class="fs-ghggbtn" id="ubtn-order">
                                 <strong>Đặt Hàng</strong>
                             </button>
                         @else

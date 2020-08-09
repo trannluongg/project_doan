@@ -25,7 +25,6 @@ use Modules\Admin\Http\Requests\AdminEditInfoRequest;
 use Modules\Admin\Http\Requests\AdminEditPasswordRequest;
 use Modules\Admin\Http\Requests\AdminLoginRequest;
 use Modules\Admin\Http\Requests\AdminRegisterRequest;
-use Modules\Admin\Http\Requests\AdminUpdateAvatar;
 use Modules\Admin\Repository\Admin\AdminRepositoryInterface;
 use Modules\Admin\Transformers\Admin\AdminTransformer;
 

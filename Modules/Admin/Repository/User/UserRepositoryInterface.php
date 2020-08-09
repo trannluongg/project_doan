@@ -13,5 +13,7 @@ use App\Core123\RepositoryInterface;
 
 interface UserRepositoryInterface extends RepositoryInterface
 {
+    public function getList($filter = [], $columns = null, $paginate = null);
 
+    public function findOneBy($filter = [], $fields = null);
 }

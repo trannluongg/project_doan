@@ -13,5 +13,13 @@ use App\Core123\RepositoryInterface;
 
 interface BillDetailRepositoryInterface extends RepositoryInterface
 {
+    public function getList($filter = [], $columns = null, $paginate = null);
 
+    public function getBillDetailId($bill_id);
+
+    public function getBillDetailWithBillIdProId($bill_id = null, $product_id = null);
+
+    public function updateBillDetailWithBillIdProId($bill_id = null, $product_id = null, $data_update = []);
+
+    public function deleteBillDetailWithBillIdProId($bill_id = null, $product_id = null, $data_update = []);
 }

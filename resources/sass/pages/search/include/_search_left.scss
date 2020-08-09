@@ -81,6 +81,31 @@
     }
 }
 
+.filterBrand, .filterPrice{
+    li{
+        margin-bottom: 6px;
+    }
+    label{
+        font-size: 15px;
+        margin-left: 10px;
+        color: #444;
+    }
+}
+
+#reset-form{
+    margin-top: 15px;
+    a{
+        display: block;
+        text-align: center;
+        height: 40px;
+        background: #e10c00;
+        color: #fff;
+        text-transform: uppercase;
+        line-height: 40px;
+        font-weight: 500;
+    }
+}
+
 .mCSB_inside>.mCSB_container {
     margin-right: 8px;
 }

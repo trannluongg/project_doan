@@ -348,6 +348,14 @@ ul.gh-popfm>li:nth-child(3)>label {
     }
 }
 
+#error-name, #error-address, #error-phone{
+    label{
+        font-size: 12px;
+        color: red;
+        margin-top: 4px;
+    }
+}
+
 @media (max-width: 768px) {
     .fs-main {
         padding: 130px 0 15px 0;

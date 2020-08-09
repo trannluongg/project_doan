@@ -25,7 +25,6 @@ class CartController extends Controller
     public function index()
     {
         $cart = $this->productService->getCart();
-        //dd($cart);
         return view('pages.cart.index', compact('cart'));
     }
 }

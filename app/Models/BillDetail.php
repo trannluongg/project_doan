@@ -11,6 +11,7 @@ class BillDetail extends Model
     protected $table = 'bill_details';
 
     public $fieldClass = BillDetailField::class;
+    public $fieldClass_v2   = \App\SetField\BillDetailField::class;
 
     protected $guarded = [];
 

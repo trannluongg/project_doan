@@ -114,22 +114,23 @@ select{
     .fs-lpil {
         width: 25%;
         margin-bottom: 6px;
-        height: 480px;
     }
 }
 
 .viewgrid{
     .fs-lpil-img {
-        height: 248px;
-        padding: 20px;
+        height: auto;
+        padding: 15px 10px;
         width: 100%;
         text-align: center;
         display: block;
         p {
-            width: 200px;
+            width: 100%;
         }
         img {
-            max-height: 200px;
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
         }
     }
     .fs-lpil-if {
@@ -152,6 +153,16 @@ select{
 
 .fs-row4phone.viewgrid .fs-lpil .fs-dttrate, .fs-row4phone.viewgrid .fs-lpil-name a, .fs-row4phone.viewgrid .fs-lpil-price {
     padding: 0 15px;
+    display: block;
+}
+.fs-lpil-name{
+    a{
+        white-space: normal;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
 }
 
 .fs-dttrate ul, .fs-dttrate p {
@@ -159,6 +170,21 @@ select{
     vertical-align: middle;
     font-size: 13px;
     color: #9b9b9b;
+}
+
+.fs-lpil-price{
+    p{
+        color: #e10c00;
+        display: inline-block;
+    }
+    span{
+        display: inline-block;
+        vertical-align: middle;
+        font-size: 12px;
+        text-decoration: line-through;
+        margin-left: 5px;
+        color: #222;
+    }
 }
 
 .fs-dttrate ul{

@@ -5,7 +5,7 @@
                 @foreach($producer as $key => $p)
                 <div class="owl-item" >
                     <div class="item">
-                        <a href="/">
+                        <a href="{{ route('get.user.search') . '?producer='.$p['id'] }}">
                             <div>
                                 <img class="owl-lazy" style="width: 170px; height: 40px; object-fit: contain" src="{{ url('upload/producer/'. $p['avatar']) }}" alt="{{$p['name']}}" >
                             </div>

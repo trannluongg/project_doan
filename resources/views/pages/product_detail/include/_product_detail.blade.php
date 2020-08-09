@@ -60,9 +60,17 @@
         </ul>
         <input type="hidden" class="txtTypeID" name="name" value="1">
         <ul data-xx="" class="fs-dtibtn clearfix build-order">
-            <li class="fsw100"><a href="javascript:void(0)" class="add-to-cart" data-value="{{ $product['id'] }}"><b>Thêm vào giỏ hàng</b></a></li>
-            <li class="fsw100"><a class="fs-dti-oder dts-addtocart" href="javascript:void(0)" title=""><p>MUA NGAY</p>
-                    <span>Giao hàng trong 1 giờ hoặc nhận tại shop</span></a></li>
+            <li class="fsw100">
+                <a href="javascript:void(0)" class="add-to-cart" data-value="{{ $product['id'] }}">
+                    <b>Thêm vào giỏ hàng</b>
+                </a>
+            </li>
+            <li class="fsw100">
+                <a class="fs-dti-oder dts-addtocart" href="{{ route('get.product.buy_now', ['id' => $product['id']]) }}" title="">
+                    <p>MUA NGAY</p>
+                    <span>Giao hàng trong 1 giờ hoặc nhận tại shop</span>
+                </a>
+            </li>
         </ul>
         <p class="fs-dtinoti">Gọi <strong>0987654321</strong> để được tư vấn mua hàng (Miễn phí)</p>
     </div>
