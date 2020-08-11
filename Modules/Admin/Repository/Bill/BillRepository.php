@@ -21,7 +21,7 @@ class BillRepository extends EloquentRepository implements BillRepositoryInterfa
 
     public function getList($filter = [], $columns = null, $paginate = null)
     {
-        $limit          = $filter['limit'];
+        $limit          = $filter['limit'] ?? 20;
 
         $query = $this->createQuery($filter, $columns);
 

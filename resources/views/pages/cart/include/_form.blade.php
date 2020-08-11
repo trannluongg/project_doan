@@ -25,6 +25,7 @@
                 </div>
             </li>
         @else
+            <li><span style="font-weight: 500">Bạn hãy đăng nhập để có thể đặt được hàng!</span></li>
             <li>
                 <label>Họ và tên: <sup>*</sup></label>
                 <div>
@@ -51,7 +52,7 @@
                 <div class="gfhrows">
                     <p>
                         @if($user)
-                            <button type="submit" class="fs-ghggbtn" id="ubtn-order">
+                            <button type="submit" class="fs-ghggbtn" id="ubtn-order" onclick="return confirm('Bạn đã chắc chắn muốn đặt hàng?')">
                                 <strong>Đặt Hàng</strong>
                             </button>
                         @else

@@ -189,6 +189,10 @@ class AdminAuthService extends BaseService
                 $admin->assignRole($role_r);
             }
         }
+        else{
+            $admin->roles()->detach();
+            $admin->syncPermissions();
+        }
 
         return $this->responseSuccess([], trans('messages.update_success'), Response::HTTP_OK);
     }

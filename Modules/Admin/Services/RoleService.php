@@ -49,7 +49,8 @@ class RoleService extends BaseService
 
     public function getList(Request $request)
     {
-        $include = ["permissions" => ['fields' => ['id', 'name'],]];
+        $include = ["permissions" => ['fields' => ['id', 'name']]];
+
         $filter  = [
             'id'            => $request->get('id'),
             'name'          => $request->get('name'),
@@ -99,7 +100,7 @@ class RoleService extends BaseService
 
         $role->givePermissionTo($permissions);
 
-        return $this->responseSuccess([], trans('messages.update_success'), Response::HTTP_OK);
+        return $this->responseSuccess([$permission_all], trans('messages.update_success'), Response::HTTP_OK);
     }
 
     public function findOneBy(Request $request, $id)

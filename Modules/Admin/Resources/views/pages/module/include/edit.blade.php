@@ -13,6 +13,7 @@
             <div class="form-group">
                 <label for="" style="font-weight: 500">Icon</label>
                 <input type="text" class="form-control" id="icon-mod-edit" placeholder="Enter icon" required>
+                <a href="https://fontawesome.com/v4.7.0/icons/" class="mt-1 d-block" target="_blank">Link Icon</a>
                 <div id="err-mod-edit-icon"></div>
             </div>
             <div class="form-group">

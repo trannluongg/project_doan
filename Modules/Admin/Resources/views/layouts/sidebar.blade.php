@@ -62,6 +62,54 @@
                         @endif
                     @endforeach
                 </ul>
+            @else
+                <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+                    @foreach($modules_group_menu as $modules_g)
+                        @php
+                            $permission_module = $modules_g['permission_module']
+                        @endphp
+                        @if(array_intersect($permission_module, $admin_permission))
+                            @if($modules_g['name'] != 'Full')
+                                <li class="nav-header text-bold text-uppercase text-warning">{{$modules_g['name']}}</li>
+                                @php
+                                    $modules = $modules_g['modules_group']['data'];
+                                @endphp
+                                @foreach ($modules as $module)
+                                    @php
+                                        $menus = $module['menu'];
+                                        $array_menu = [];
+                                    @endphp
+                                    @foreach($menus as $menu)
+                                        @php
+                                            array_push($array_menu, $menu[1])
+                                        @endphp
+                                    @endforeach
+                                    @if(in_array($module['permission'], $admin_permission))
+                                        <li class="nav-item has-treeview {{ (in_array($current_route, $array_menu)) ? 'menu-open' : '' }}">
+                                            <a href="#" class="nav-link {{ (in_array($current_route, $array_menu)) ? 'active' : '' }}">
+                                                <i class="nav-icon {{ $module['icon'] }}"></i>
+                                                <p>
+                                                    {{ $module['name'] }}
+                                                    <i class="right fas fa-angle-left"></i>
+                                                </p>
+                                            </a>
+                                            <ul class="nav nav-treeview {{ (in_array($current_route, $array_menu)) ? 'd-block' : '' }}">
+                                                @foreach($menus as $menu)
+                                                    <li class="nav-item">
+                                                        <a href="{{ route($menu[1]) }}" class="nav-link {{ route($menu[1]) == route($current_route) ? 'active' : '' }}" style="white-space: nowrap">
+                                                            <i class="far fa-circle nav-icon"></i>
+                                                            <p>{{ $menu[0] }}</p>
+                                                        </a>
+                                                    </li>
+                                                @endforeach
+                                            </ul>
+                                        </li>
+                                    @endif
+                                @endforeach
+                            @endif
+                        @endif
+                    @endforeach
+                </ul>
             @endif
         </nav>
         <!-- /.sidebar-menu -->

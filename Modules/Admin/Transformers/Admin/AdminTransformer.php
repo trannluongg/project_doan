@@ -41,7 +41,9 @@ class AdminTransformer extends Transformer
     {
         $this->relations = [
             'roles_admin' => RoleTransformer::class,
-            'permissions_admin' => PermissionTransformer::class
+            'permissions_admin' => PermissionTransformer::class,
+            'roles' => RoleTransformer::class,
+            'permissions' => PermissionTransformer::class
         ];
     }
 }

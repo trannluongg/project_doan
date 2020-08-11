@@ -23,6 +23,9 @@
                                         @case(4)
                                             <a class="bill-again" href="javascript:void(0)" data-id="{{ $key }}">Mua lần nữa</a>
                                             @break;
+                                        @case(5)
+                                            <span>Đơn hàng của bạn đã bị khóa</span>
+                                        @break;
                                     @endswitch
                                 </div>
                             </div>

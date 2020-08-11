@@ -48,6 +48,7 @@
                             <option value="2" {{ ($b['status'] == 2 ? 'selected' : '') }}>Đã duyệt</option>
                             <option value="3" {{ ($b['status'] == 3 ? 'selected' : '') }}>Đã giao hàng</option>
                             <option value="4" {{ ($b['status'] == 4 ? 'selected' : '') }}>Hủy</option>
+                            <option value="5" {{ ($b['status'] == 5 ? 'selected' : '') }}>Khóa</option>
                         </select>
                     </td>
                     <td>{{ $b['created_at'] ?? '' }}</td>

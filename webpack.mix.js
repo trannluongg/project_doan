@@ -73,10 +73,10 @@ var build_js = [
     //     from: 'resources/js/pages/Admin/module/module.js',
     //     to: 'js/module.js'
     // },
-    // {
-    //     from: 'resources/js/pages/Admin/role/role.js',
-    //     to: 'js/role.js'
-    // },
+    {
+        from: 'resources/js/pages/Admin/role/role.js',
+        to: 'js/role.js'
+    },
     // {
     //     from: 'resources/js/pages/Admin/producer/producer.js',
     //     to: 'js/producer.js'
@@ -101,10 +101,10 @@ var build_js = [
         from: 'resources/js/pages/Admin/bill/bill_admin.js',
         to: 'js/bill_admin.js'
     },
-    // {
-    //     from: 'resources/js/pages/Admin/acc_admin/acc_admin.js',
-    //     to: 'js/acc_admin.js'
-    // },
+    {
+        from: 'resources/js/pages/Admin/acc_admin/acc_admin.js',
+        to: 'js/acc_admin.js'
+    },
 ];
 
 let build_scss = [

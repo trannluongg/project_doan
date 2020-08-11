@@ -24,7 +24,7 @@ Route::prefix('admin')->group(function()
             Route::get('/', 'DashboardController@index')->name('get.dashboard.index');
         });
 
-        Route::group(['prefix'=> 'module-group'], function ()
+        Route::group(['prefix'=> 'module-group', 'middleware' => ['role_or_permission:super_admin|admin|module']], function ()
         {
             Route::get('/', 'ModuleGroupController@index')->name('get.module_group.index');
             Route::get('/{id}', 'ModuleGroupController@getModuleGroup')->name('get.module_group.get_module_group');
@@ -32,7 +32,7 @@ Route::prefix('admin')->group(function()
             Route::post('/add', 'ModuleGroupController@store')->name('post.module_group.add');
         });
 
-        Route::group(['prefix'=> 'permissions'], function ()
+        Route::group(['prefix'=> 'permissions', 'middleware' => ['role_or_permission:super_admin|admin|permission']], function ()
         {
             Route::get('/', 'PermissionController@index')->name('get.permissions.index');
             Route::post('/add', 'PermissionController@store')->name('get.permissions.add');
@@ -40,7 +40,7 @@ Route::prefix('admin')->group(function()
             Route::put('/{id}', 'PermissionController@editPermission')->name('get.permissions.edit');
         });
 
-        Route::group(['prefix'=> 'modules'], function ()
+        Route::group(['prefix'=> 'modules', 'middleware' => ['role_or_permission:super_admin|admin|module']], function ()
         {
             Route::get('/', 'ModuleController@index')->name('get.modules.index');
             Route::post('/add', 'ModuleController@store')->name('get.modules.add');
@@ -48,7 +48,7 @@ Route::prefix('admin')->group(function()
             Route::put('/{id}', 'ModuleController@editModule')->name('get.modules.edit');
         });
 
-        Route::group(['prefix'=> 'roles'], function ()
+        Route::group(['prefix'=> 'roles', 'middleware' => ['role_or_permission:super_admin|admin|role']], function ()
         {
             Route::get('/', 'RoleController@index')->name('get.roles.index');
             Route::post('/add', 'RoleController@store')->name('get.roles.add');
@@ -56,7 +56,7 @@ Route::prefix('admin')->group(function()
             Route::put('/{id}', 'RoleController@editRole')->name('get.roles.edit');
         });
 
-        Route::group(['prefix'=> 'producers'], function ()
+        Route::group(['prefix'=> 'producers', 'middleware' => ['role_or_permission:super_admin|admin|producer']], function ()
         {
             Route::get('/', 'ProducerController@index')->name('get.producers.index');
             Route::post('/add', 'ProducerController@store')->name('get.producers.add');
@@ -65,7 +65,7 @@ Route::prefix('admin')->group(function()
         });
 
 
-        Route::group(['prefix'=> 'brands'], function ()
+        Route::group(['prefix'=> 'brands', 'middleware' => ['role_or_permission:super_admin|admin|brand']], function ()
         {
             Route::get('/', 'BrandController@index')->name('get.brands.index');
             Route::post('/add', 'BrandController@store')->name('get.brands.add');
@@ -73,7 +73,7 @@ Route::prefix('admin')->group(function()
             Route::post('/{id}', 'BrandController@editBrand')->name('get.brands.edit');
         });
 
-        Route::group(['prefix'=> 'category'], function ()
+        Route::group(['prefix'=> 'category', 'middleware' => ['role_or_permission:super_admin|admin|category']], function ()
         {
             Route::get('/', 'CategoryController@index')->name('get.category.index');
             Route::post('/add', 'CategoryController@store')->name('get.category.add');
@@ -81,7 +81,7 @@ Route::prefix('admin')->group(function()
             Route::post('/{id}', 'CategoryController@editCategory')->name('get.category.edit');
         });
 
-        Route::group(['prefix'=> 'products'], function ()
+        Route::group(['prefix'=> 'products', 'middleware' => ['role_or_permission:super_admin|admin|product']], function ()
         {
             Route::get('/', 'ProductController@index')->name('get.products.index');
             Route::post('/add', 'ProductController@store')->name('get.products.add');
@@ -89,7 +89,7 @@ Route::prefix('admin')->group(function()
             Route::post('/{id}', 'ProductController@editProduct')->name('get.products.edit');
         });
 
-        Route::group(['prefix'=> 'bills'], function ()
+        Route::group(['prefix'=> 'bills', 'middleware' => ['role_or_permission:super_admin|admin|bill']], function ()
         {
             Route::get('/', 'BillController@index')->name('get.bills.index');
             Route::post('/add', 'BillController@store')->name('get.bills.add');
@@ -109,8 +109,9 @@ Route::prefix('admin')->group(function()
             Route::post('/remove/product/detail', 'BillDetailController@removeProductBill')->name('get.bill_detail.remove_product_bill');
         });
 
-        Route::group(['prefix'=> 'acc-admins'], function ()
+        Route::group(['prefix'=> 'acc-admins', 'middleware' => ['role:super_admin|admin']], function ()
         {
+            Route::get('/', 'AdminController@index')->name('get.acc_admins.index');
             Route::get('/', 'AdminController@index')->name('get.acc_admins.index');
             Route::post('/add', 'AdminController@store')->name('get.acc_admins.add');
             Route::get('/{id}', 'AdminController@getAccAdmin')->name('get.acc_admins.get_user');
@@ -119,7 +120,7 @@ Route::prefix('admin')->group(function()
             Route::post('/avatar/{id}', 'AdminController@updateAvatarAdmin')->name('get.acc_admins.update_avatar_user');
         });
 
-        Route::group(['prefix'=> 'acc-user'], function ()
+        Route::group(['prefix'=> 'acc-user', 'middleware' => ['role:super_admin|admin']], function ()
         {
             Route::get('/', 'UserController@index')->name('get.users.index');
             Route::post('/add', 'UserController@store')->name('get.users.add');
@@ -129,9 +130,9 @@ Route::prefix('admin')->group(function()
             Route::post('/avatar/{id}', 'UserController@updateAvatarUser')->name('get.users.update_avatar_user');
         });
 
-        Route::get('/register', 'AdminController@create')->name('get.admin.register');
-
-        Route::post('/register', 'AdminController@store')->name('post.admin.register');
+//        Route::get('/register', 'AdminController@create')->name('get.admin.register');
+//
+//        Route::post('/register', 'AdminController@store')->name('post.admin.register');
 
         Route::get('/logout', 'AdminAuthController@logout')->name('post.admin.logout');
     });
