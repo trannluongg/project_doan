@@ -27,9 +27,9 @@
                                 <li>
                                     <a class="dropdown-item edit" href="javascript:void(0)" data-id="{{ $b['id'] }}"><i class="fas fa-pencil-alt text-success mr-2"></i>Sửa</a>
                                 </li>
-{{--                                <li>--}}
-{{--                                    <a class="dropdown-item delete" href="javascript:void(0)" data-id="{{ $b['id'] }}"><i class="fas fa-trash-alt text-danger mr-2"></i>Xóa</a>--}}
-{{--                                </li>--}}
+                                <li>
+                                    <a class="dropdown-item delete" href="{{ route('get.bill.get_bill_pdf', ['id' => $b['id']]) }}"><i class="fas fa-download text-danger mr-2"></i>Export Bill</a>
+                                </li>
                             </ul>
                         </div>
                     </td>

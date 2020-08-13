@@ -59,9 +59,7 @@ class ProductController extends Controller
         $admin = $this->adminAuthService->getAdmin();
         $admin_permission = $this->getAdminPermissions($admin);
 
-//        dd($modules_group_menu,$admin_permission);
-
-        $data_category = $this->categoryService->getList($request);
+        $data_category = $this->categoryService->getList($request, false);
         $data_category = json_decode($data_category->content(), 1);
         $data_category = $data_category['data'];
 

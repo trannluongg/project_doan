@@ -15,4 +15,8 @@ class BillDetail extends Model
 
     protected $guarded = [];
 
+    public function bill_products()
+    {
+        $this->hasMany(Products::class, 'bid_product_id');
+    }
 }

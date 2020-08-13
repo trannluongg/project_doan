@@ -11,6 +11,7 @@ namespace Modules\Admin\Repository\Bill;
 
 use App\Core123\EloquentRepository;
 use App\Models\Bills;
+use Illuminate\Support\Facades\DB;
 
 class BillRepository extends EloquentRepository implements BillRepositoryInterface
 {
@@ -43,5 +44,14 @@ class BillRepository extends EloquentRepository implements BillRepositoryInterfa
         if ($bil_user_phone)    $query->where('bil_user_phone', $bil_user_phone);
 
         return $query;
+    }
+
+    public function getCountMoneyBillMonth()
+    {
+        return $this->model->select(DB::raw("SUM(bil_sum_money) as sum_money"), DB::raw("MONTH(created_at) as month"))
+                            ->groupBy('month')
+                            ->orderBy('month')
+                            ->orderBy('id')
+                            ->get();
     }
 }

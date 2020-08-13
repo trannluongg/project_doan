@@ -21,7 +21,7 @@ class CategoryRepository extends EloquentRepository implements CategoryRepositor
 
     public function getList($filter = [], $columns = null, $paginate = null)
     {
-        $limit          = $filter['limit'] ?? 20;
+        $limit          = $filter['limit'];
 
         $query = $this->createQuery($filter, $columns);
 

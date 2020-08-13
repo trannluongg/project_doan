@@ -45,6 +45,7 @@ class CategoryService extends BaseService
             'limit'         => $request->get('limit'),
             'include'       => $request->get('include')
         ];
+
         $fields = $request->get('fields') ?? 'name,created_at';
         $paginate       = $request->get('paginate') ?? ($is_paginate ? 20 : null);
 

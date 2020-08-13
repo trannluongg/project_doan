@@ -10,6 +10,7 @@ namespace Modules\Admin\Http\Controllers;
 
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\App;
 use Modules\Admin\Http\Requests\Bill\BillEditRequest;
 use Modules\Admin\Services\AdminAuthService;
 use Modules\Admin\Services\BillDetailService;
@@ -51,8 +52,6 @@ class BillController extends Controller
         $admin = $this->adminAuthService->getAdmin();
         $admin_permission = $this->getAdminPermissions($admin);
 
-
-
         return view('admin::pages.bill.index', compact(
             'data_bills',
             'modules_group_menu',
@@ -78,5 +77,25 @@ class BillController extends Controller
     public function getBillDetail($id)
     {
         return $this->billDetailService->getBillDetailId($id);
+    }
+
+    public function billPdf($id)
+    {
+        $bill                           = $this->billService->show($id)->getContent();
+        $bill                           = json_decode($bill, 1);
+        $bill_id                        = $bill['data']['data']['id'];
+        $bill_detail                    = $this->billDetailService->getBillDetailId($bill_id)->getContent();
+        $bill_detail                    = json_decode($bill_detail, 1);
+        $bill_detail['customer_name']   = $bill['data']['data']['username'];
+        $bill_detail['customer_phone']  = $bill['data']['data']['user_phone'];
+        $bill_detail['customer_address'] = $bill['data']['data']['user_address'];
+
+        $pdf  = App::make('dompdf.wrapper');
+        $pdf->loadView('admin::pages.bill.bill_pdf', compact('bill_detail'));
+        $option       = [
+            'dpi' => 120
+        ];
+        $pdf->setOptions($option);
+        return $pdf->download('bill_'.$bill_id.'_'.$bill['data']['data']['username'].'.pdf');
     }
 }

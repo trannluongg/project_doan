@@ -44,8 +44,15 @@ const LoginAjax = {
             })
             .catch(err =>
             {
-                this.handleErrorEdit(err.response.data);
-                console.log(err.response.data);
+                let status = err.response.status;
+                if(status === 401)
+                {
+                    $('#error-login').html(`<span class="text-danger" style="font-size: 13px">Account is block.</span>`);
+                }
+                else
+                {
+                    this.handleErrorEdit(err.response.data);
+                }
             });
     },
 
@@ -97,7 +104,7 @@ const LoginAjax = {
         if (login !== undefined)
         {
             let error_login = this.handelErrorLogin(login);
-            $('#error-login').append(error_login);
+            $('#error-login').html(error_login);
         }
     },
 

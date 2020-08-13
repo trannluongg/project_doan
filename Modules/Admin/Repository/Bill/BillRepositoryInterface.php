@@ -14,4 +14,6 @@ use App\Core123\RepositoryInterface;
 interface BillRepositoryInterface extends RepositoryInterface
 {
     public function getList($filter = [], $columns = null, $paginate = null);
+
+    public function getCountMoneyBillMonth();
 }

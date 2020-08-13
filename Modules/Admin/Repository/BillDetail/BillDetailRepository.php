@@ -11,6 +11,7 @@ namespace Modules\Admin\Repository\BillDetail;
 
 use App\Core123\EloquentRepository;
 use App\Models\BillDetail;
+use Illuminate\Support\Facades\DB;
 
 class BillDetailRepository extends EloquentRepository implements BillDetailRepositoryInterface
 {
@@ -59,5 +60,17 @@ class BillDetailRepository extends EloquentRepository implements BillDetailRepos
     public function deleteBillDetailWithBillIdProId($bill_id = null, $product_id = null, $data_update = [])
     {
         return $this->model->where('bid_bill_id', $bill_id)->where('bid_product_id', $product_id)->delete();
+    }
+
+
+    public function getCountProductBill()
+    {
+        return $this->model->join('products', 'bill_details.bid_product_id', '=', 'products.id')
+                            ->select('products.pro_name', 'bill_details.bid_product_id', DB::raw('SUM(bill_details.bid_product_quantity) as total'))
+                            ->groupBy('bill_details.bid_product_id')
+                            ->orderBy('total')
+                            ->limit(5)
+                            ->get();
+
     }
 }

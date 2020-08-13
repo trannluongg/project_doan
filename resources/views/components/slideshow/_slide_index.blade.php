@@ -5,42 +5,42 @@
                 <div class="owl-stage" id="slide-index">
                     <div class="owl-item">
                         <div class="item">
-                            <a target="_blank" href="#">
+                            <a href="javascript:void(0)">
                                 <img src="{{ url('images/banner/home_big_one.jpeg') }}">
                             </a>
                         </div>
                     </div>
                     <div class="owl-item">
                         <div class="item">
-                            <a target="_blank" href="#">
+                            <a href="javascript:void(0)">
                                 <img src="{{ url('images/banner/home_big_two.jpeg') }}">
                             </a>
                         </div>
                     </div>
                     <div class="owl-item">
                         <div class="item">
-                            <a target="_blank" href="#">
+                            <a href="javascript:void(0)">
                                 <img src="{{ url('images/banner/home_big_three.jpeg') }}">
                             </a>
                         </div>
                     </div>
                     <div class="owl-item">
                         <div class="item">
-                            <a target="_blank" href="#">
+                            <a href="javascript:void(0)">
                                 <img src="{{ url('images/banner/home_big_four.jpeg') }}">
                             </a>
                         </div>
                     </div>
                     <div class="owl-item">
                         <div class="item">
-                            <a target="_blank" href="#">
+                            <a href="javascript:void(0)">
                                 <img src="{{ url('images/banner/home_big_five.jpeg') }}">
                             </a>
                         </div>
                     </div>
                     <div class="owl-item">
                         <div class="item">
-                            <a target="_blank" href="#">
+                            <a href="javascript:void(0)">
                                 <img src="{{ url('images/banner/home_big_six.jpeg') }}">
                             </a>
                         </div>
@@ -57,12 +57,12 @@
     <div class="fs-asright">
         <ul class="fs-asads">
             <li>
-                <a target="_blank" href="#" title="2">
+                <a href="javascript:void(0)" title="2">
                     <img class="" style="height:88px" src="{{ url('images/banner/home_small_left_one.jpeg') }}">
                 </a>
             </li>
             <li>
-                <a target="_blank" href="#" title="">
+                <a href="javascript:void(0)" title="">
                     <img class="" style="height:88px" src="{{ url('images/banner/home_small_left_two.jpeg') }}">
                 </a>
             </li>

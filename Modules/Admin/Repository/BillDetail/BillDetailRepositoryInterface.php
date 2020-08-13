@@ -22,4 +22,6 @@ interface BillDetailRepositoryInterface extends RepositoryInterface
     public function updateBillDetailWithBillIdProId($bill_id = null, $product_id = null, $data_update = []);
 
     public function deleteBillDetailWithBillIdProId($bill_id = null, $product_id = null, $data_update = []);
+
+    public function getCountProductBill();
 }

@@ -242,7 +242,10 @@ const Bill = {
 
         $('#bill-detail-id span').html(data.id);
 
-        Object.keys(data['bill']).forEach(index => {
+        let length_bill = Object.keys(data['bill']).length;
+
+        Object.keys(data['bill']).forEach(index =>
+        {
             let value = data['bill'][index];
             let item = value.item;
             let id    = item.id;
@@ -298,6 +301,7 @@ const Bill = {
                 </div>`;
 
         $('#body-bill-detail').html(html);
+        if(length_bill === 1) $('.bill-delete').remove();
     },
 
     updateBill()
@@ -384,6 +388,10 @@ const Bill = {
             {
                 ele.parent().parent().parent().parent().remove();
 
+                let length_product_bill = $('.fs-ghli.proitem').length;
+
+                if (length_product_bill === 1) $('.bill-delete').remove();
+
                 $('.loading-cart').fadeOut();
 
                 let price = res.data.data.data.sum_money.toString().replace(/\D/g, "").replace(/\B(?=(\d{3})+(?!\d)\.?)/g, ",");
@@ -394,7 +402,8 @@ const Bill = {
 
                 Toast.toastrUpdateSuccess('Update đơn hành thành công!');
             })
-            .catch(err => {
+            .catch(err =>
+            {
                 if (err.response.status === 404)
                 {
                     Toast.showToastr();

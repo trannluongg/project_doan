@@ -102,6 +102,7 @@ class UserService extends BaseService
         $data['date_of_birth'] = $request->get('date_of_birth');
         $data['gender']        = $request->get('gender');
         $data['address']       = $request->get('address');
+        $data['status']         = $request->get('status');
 
         $user = $this->userRepository->firstById($id);
 

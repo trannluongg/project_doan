@@ -16,7 +16,7 @@ use Illuminate\Support\Facades\Config;
 use Tymon\JWTAuth\Facades\JWTAuth;
 use Tymon\JWTAuth\Http\Middleware\BaseMiddleware;
 
-class JwtUserMiddleware extends BaseMiddleware
+class  JwtUserMiddleware extends BaseMiddleware
 {
     public function __construct(\Tymon\JWTAuth\JWTAuth $auth)
     {

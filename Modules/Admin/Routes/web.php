@@ -15,6 +15,7 @@ Route::prefix('admin')->group(function()
 {
     Route::get('/login', 'AdminAuthController@index')->name('get.admin.login');
 
+
     Route::post('/login', 'AdminAuthController@postLogin')->name('admin_login');
 
     Route::group(['middleware'=> 'auth.jwt'], function ()
@@ -97,6 +98,7 @@ Route::prefix('admin')->group(function()
             Route::post('/{id}', 'BillController@editBill')->name('get.bills.edit');
             Route::post('/update-status/{id}', 'BillController@updateBillStatus')->name('get.bills.update_status');
             Route::get('/detail/{id}', 'BillController@getBillDetail')->name('get.bills.get_bill_detail');
+            Route::get('/bill-pdf/{id}', 'BillController@billPdf')->name('get.bill.get_bill_pdf');
         });
 
         Route::group(['prefix'=> 'bill-detail'], function ()
@@ -109,7 +111,7 @@ Route::prefix('admin')->group(function()
             Route::post('/remove/product/detail', 'BillDetailController@removeProductBill')->name('get.bill_detail.remove_product_bill');
         });
 
-        Route::group(['prefix'=> 'acc-admins', 'middleware' => ['role:super_admin|admin']], function ()
+        Route::group(['prefix'=> 'acc-admins', 'middleware' => ['role:super_admin|admin|acl']], function ()
         {
             Route::get('/', 'AdminController@index')->name('get.acc_admins.index');
             Route::get('/', 'AdminController@index')->name('get.acc_admins.index');

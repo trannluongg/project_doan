@@ -22,7 +22,7 @@ class UserUpdateRequest extends RequestAbstract
     {
         return [
             'email'             => 'required|email|unique:users,email,' . intval($this->id),
-            'phone'             => 'required|string|unique:users,phone,' . intval($this->id),
+            'phone'             => 'required|string|regex:/^[0-9]{2}[0-9]{8}$/',
         ];
     }
 
@@ -44,7 +44,7 @@ class UserUpdateRequest extends RequestAbstract
             'email.unique'              => 'Email' . trans('messages.validate.unique'),
             'phone.required'            => trans('messages.validate.phone') . trans('messages.validate.required'),
             'phone.string'              => trans('messages.validate.phone') . trans('messages.validate.string'),
-            'phone.unique'              => trans('messages.validate.phone') . trans('messages.validate.unique'),
+            'phone.regex'               => trans('messages.validate.phone') . trans('messages.validate.regex'),
         ];
     }
 }

@@ -164,4 +164,17 @@ class BillDetailService extends BaseService
 
         return $this->responseSuccess(['data' => $data]);
     }
+
+    public function getCountProductBill()
+    {
+        $bill_product = $this->billDetailRepository->getCountProductBill();
+
+        $data = '';
+        foreach ($bill_product as $product)
+        {
+            $data .= "['".substr($product->pro_name, 0, 30) . '...' ."', ".$product->total."],";
+        }
+
+        return $data;
+    }
 }

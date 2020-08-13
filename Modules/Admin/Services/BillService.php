@@ -89,4 +89,18 @@ class BillService extends BaseService
 
         return $this->responseSuccess([], trans('messages.update_success'), Response::HTTP_OK);
     }
+
+    public function getCountMoneyBillMonth()
+    {
+        $bill_sum_money = $this->billRepository->getCountMoneyBillMonth();
+
+        $data = '';
+
+        foreach ($bill_sum_money as $money)
+        {
+            $data .= "['". 'Tháng '. $money->month ."', " .$money->sum_money."],";
+        }
+
+        return $data;
+    }
 }

@@ -11,6 +11,7 @@ namespace Modules\Admin\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Modules\Admin\Services\AdminAuthService;
+use Modules\Admin\Services\BillDetailService;
 use Modules\Admin\Services\BillService;
 use Modules\Admin\Services\ModuleGroupService;
 use Modules\Admin\Services\UserService;
@@ -21,16 +22,19 @@ class DashboardController extends Controller
     private $adminAuthService;
     private $userService;
     private $billService;
+    private $billDetailService;
 
     public function __construct(ModuleGroupService $moduleGroupService,
                                 AdminAuthService $adminAuthService,
                                 UserService $userService,
-                                BillService  $billService)
+                                BillService  $billService,
+                                BillDetailService $billDetailService)
     {
         $this->adminAuthService = $adminAuthService;
         $this->moduleGroupService = $moduleGroupService;
         $this->userService = $userService;
         $this->billService = $billService;
+        $this->billDetailService = $billDetailService;
         parent::__construct();
     }
 
@@ -52,10 +56,15 @@ class DashboardController extends Controller
         $bill = json_decode($bill, 1);
         $bill_count = count($bill['data']);
 
+        $product_bill = $this->billDetailService->getCountProductBill();
+        $sum_money_month = $this->billService->getCountMoneyBillMonth();
+
         return view('admin::pages.dashboard.index', compact(
             'modules_group_menu',
             'admin_permission',
             'user_count',
-            'bill_count'));
+            'bill_count',
+            'product_bill',
+            'sum_money_month'));
     }
 }

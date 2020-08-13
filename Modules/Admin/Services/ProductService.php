@@ -49,6 +49,7 @@ class ProductService extends BaseService
     public function getList(Request $request)
     {
         $include = ["producers"=>["fields"=>["id","name"]], "brands"=>["fields"=>["id","name"]], "category"=>["fields"=>["id","name"]]];
+
         $filter  = [
             'id'            => $request->get('id'),
             'pro_name'      => $request->get('pro_name'),

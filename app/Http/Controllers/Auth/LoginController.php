@@ -2,10 +2,15 @@
 
 namespace App\Http\Controllers\Auth;
 
+use App\Core123\Auth\AuthMe;
 use App\Http\Controllers\Controller;
 use App\Services\AuthService;
 use Illuminate\Http\Request;
+use Illuminate\Http\Response;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Config;
 use Laravel\Socialite\Facades\Socialite;
+use Tymon\JWTAuth\Facades\JWTAuth;
 
 class LoginController extends Controller
 {
@@ -24,7 +29,16 @@ class LoginController extends Controller
 
     public function postLogin(Request $request)
     {
-        return $this->authService->postLogin($request);
+        $data = $this->authService->postLogin($request);
+        Config::set('auth.defaults.guard', 'users');
+        $user = JWTAuth::setToken(AuthMe::token('users'))->toUser();
+        if ($user->status == 2)
+        {
+            Auth::guard('users')->logout();
+            AuthMe::setTokenUser(null);
+            return response()->json([], Response::HTTP_UNAUTHORIZED);
+        }
+        return $data;
     }
 
     public function logout()

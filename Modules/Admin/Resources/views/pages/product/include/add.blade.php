@@ -18,14 +18,14 @@
                     </div>
                     <div class="col-lg-6">
                         <label for="" style="font-weight: 500">Sale(%)</label>
-                        <input type="number" class="form-control" id="sale-pro-add" placeholder="Enter sale vd:20" required value="6">
+                        <input type="number" class="form-control" id="sale-pro-add" placeholder="Enter sale vd:20" required>
                         <div id="err-pro-add-sale"></div>
                     </div>
                 </div>
             </div>
             <div class="form-group">
                 <label for="" style="font-weight: 500">Total</label>
-                <input type="number" class="form-control" id="total-pro-add" placeholder="Enter total" required value="40">
+                <input type="number" class="form-control" id="total-pro-add" placeholder="Enter total" required>
                 <div id="err-pro-add-total"></div>
             </div>
             <div class="form-group">
