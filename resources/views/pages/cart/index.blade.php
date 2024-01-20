@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @section('title', 'TranLuong')
 @section('css')
-    <link rel="stylesheet" href="{{ asset('assets/css/toastr.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/core/css/toastr.css') }}">
     <style>
         <?= $style = file_get_contents('assets/css/cart.min.css');?>
     </style>
@@ -24,7 +24,7 @@
 @stop
 
 @section('script')
-    <script type="text/javascript" src="{{ asset('assets/js/toastr.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('assets/core/js/toastr.min.js') }}"></script>
     <script type="text/javascript">
         <?= file_get_contents('assets/js/cart.js');?>
     </script>

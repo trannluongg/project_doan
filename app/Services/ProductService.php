@@ -11,7 +11,6 @@ namespace App\Services;
 
 use App\Models\Cart;
 use App\Repository\Product\ProductRepositoryInterface;
-use App\Service\BaseService;
 use App\Transformers\Product\ProductTransformer;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;

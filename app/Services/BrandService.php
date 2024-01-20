@@ -10,7 +10,6 @@ namespace App\Services;
 
 
 use App\Repository\Brand\BrandRepositoryInterface;
-use App\Service\BaseService;
 use App\Transformers\Brand\BrandTransformer;
 use Illuminate\Http\Request;
 

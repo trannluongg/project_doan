@@ -7,8 +7,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title> @yield('title')</title>
     <style>
-        <?= file_get_contents('assets/css/slick.css');?>
-        <?= file_get_contents('assets/css/slick-theme.css');?>
+        <?= file_get_contents('assets/core/css/slick.min.css');?>
+        <?= file_get_contents('assets/core/css/slick-theme.min.css');?>
     </style>
     @yield('css')
 </head>
@@ -27,8 +27,8 @@
 
     </div>
     <script type="text/javascript">
-        <?= file_get_contents('assets/js/jquery.min.js');?>
-        <?= file_get_contents('assets/js/slick.min.js');?>
+        <?= file_get_contents('assets/core/js/jquery.min.js');?>
+        <?= file_get_contents('assets/core/js/slick.min.js');?>
     </script>
     @yield('script')
 </body>

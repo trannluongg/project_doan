@@ -29,6 +29,6 @@
         </ul>
     </div>
     <div class="rowfoot2">
-        <p>Trần Văn Lương - Lã Minh Hiếu</p>
+        <p>Trần Văn Lương</p>
     </div>
 </footer>

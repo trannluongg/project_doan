@@ -9,7 +9,7 @@
 namespace Modules\Admin\Services;
 
 
-use App\Service\BaseService;
+use App\Services\BaseService;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;

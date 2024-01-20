@@ -43,8 +43,8 @@ class AuthMe
 
     private function token($guard)
     {
-        if ($guard[0] == 'admins') return (new Session())->get('token_login_admin')[0];
-        else return (new Session())->get('token_login_user')[0];
+        if ($guard[0] == 'admins') return (new Session())->get('token_login_admin')[0] ?? '';
+        else return (new Session())->get('token_login_user')[0] ?? '';
     }
 
     private function setTokenAdmin($info_token = [])

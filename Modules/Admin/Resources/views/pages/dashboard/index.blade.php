@@ -95,9 +95,9 @@
 @endsection
 
 @section('script')
-    <script type="text/javascript" src="{{ url('assets/js/admin/jquery.flot.js') }}"></script>
-    <script type="text/javascript" src="{{ url('assets/js/admin/jquery.flot.resize.js') }}"></script>
-    <script type="text/javascript" src="{{ url('assets/js/admin/jquery.flot.pie.js') }}"></script>
+    <script type="text/javascript" src="{{ url('assets/core/js/admin/jquery.flot.js') }}"></script>
+    <script type="text/javascript" src="{{ url('assets/core/js/admin/jquery.flot.resize.js') }}"></script>
+    <script type="text/javascript" src="{{ url('assets/core/js/admin/jquery.flot.pie.js') }}"></script>
     <script>
         /*
     * BAR CHART

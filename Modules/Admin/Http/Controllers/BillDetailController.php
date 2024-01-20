@@ -21,6 +21,11 @@ class BillDetailController extends Controller
         parent::__construct();
     }
 
+    public function index()
+    {
+        return redirect()->route('get.bills.index');
+    }
+
     public function updateBillDetail(Request $request)
     {
         return $this->billDetailService->updateBillDetail($request);

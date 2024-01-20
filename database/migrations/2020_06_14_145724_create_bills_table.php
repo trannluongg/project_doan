@@ -15,7 +15,7 @@ class CreateBillsTable extends Migration
     {
         Schema::create('bills', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('bil_user')->unique();
+            $table->integer('bil_user');
             $table->string('bil_username');
             $table->string('bil_user_address');
             $table->string('bil_user_phone');

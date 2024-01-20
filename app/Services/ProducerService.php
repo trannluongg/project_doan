@@ -10,7 +10,6 @@ namespace App\Services;
 
 
 use App\Repository\Producer\ProducerRepositoryInterface;
-use App\Service\BaseService;
 use App\Transformers\Producer\ProducerTransformer;
 
 class ProducerService extends BaseService

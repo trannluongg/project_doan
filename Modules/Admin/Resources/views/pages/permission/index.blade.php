@@ -3,11 +3,11 @@
 @section('title', 'Permission')
 
 @section('css')
-    <link rel="stylesheet" href="{{ asset('assets/css/admin/toastr.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/core/css/admin/toastr.css') }}">
     <style>
         <?= $style = file_get_contents('assets/css/permission.min.css');?>
     </style>
-    <link rel="stylesheet" href="{{ asset('assets/css/admin/select2.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/core/css/admin/select2.css') }}">
 @endsection
 
 @section('content')
@@ -33,9 +33,9 @@
 @endsection
 
 @section('script')
-    <script type="text/javascript" src="{{ asset('assets/js/admin/toastr.min.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('assets/js/admin/daterangepicker_format.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('assets/js/admin/select2.full.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('assets/core/js/admin/toastr.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('assets/core/js/admin/daterangepicker_format.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('assets/core/js/admin/select2.full.js') }}"></script>
     <script type="text/javascript">
         <?= file_get_contents('assets/js/permission.js');?>
     </script>

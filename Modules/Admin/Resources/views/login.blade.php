@@ -4,8 +4,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Admin | Login</title>
-    <link rel="stylesheet" href="{{ asset('assets/css/admin/icheck-bootstrap.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/css/admin/adminlte.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/core/css/admin/icheck-bootstrap.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/core/css/admin/adminlte.css') }}">
 </head>
 <body class="hold-transition login-page">
 <div class="login-box">
@@ -51,10 +51,10 @@
     </div>
 </div>
 
-<script type="text/javascript" src="{{ asset('assets/js/admin/jquery.js') }}"></script>
+<script type="text/javascript" src="{{ asset('assets/core/js/jquery.js') }}"></script>
 <script src="https://kit.fontawesome.com/ef4075029c.js" crossorigin="anonymous"></script>
-<script type="text/javascript" src="{{ asset('assets/js/admin/bootstrap.bundle.js') }}"></script>
-<script type="text/javascript" src="{{ asset('assets/js/admin/adminlte.js') }}"></script>
+<script type="text/javascript" src="{{ asset('assets/core/js/admin/bootstrap.bundle.js') }}"></script>
+<script type="text/javascript" src="{{ asset('assets/core/js/admin/adminlte.js') }}"></script>
 
 </body>
 </html>

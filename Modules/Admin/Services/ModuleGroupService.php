@@ -9,7 +9,7 @@
 namespace Modules\Admin\Services;
 
 
-use App\Service\BaseService;
+use App\Services\BaseService;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Modules\Admin\Http\Requests\ModuleGroup\ModuleGroupCreateRequest;

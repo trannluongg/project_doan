@@ -12,8 +12,6 @@ namespace App\Services;
 use App\Repository\Bill\BillRepositoryInterface;
 use App\Repository\BillDetail\BillDetailRepositoryInterface;
 use App\Repository\Product\ProductRepositoryInterface;
-use App\Service\BaseService;
-use App\Transformers\Bill\BillTransformer;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Session;

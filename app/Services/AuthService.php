@@ -14,7 +14,6 @@ use App\Http\Requests\UserRegisterRequest;
 use App\Http\Requests\UserUpdateRequest;
 use App\Models\Authorization;
 use App\Repository\User\UserRepositoryInterface;
-use App\Service\BaseService;
 use App\Transformers\AuthorizationTransformer;
 use Carbon\Carbon;
 use Illuminate\Http\Request;

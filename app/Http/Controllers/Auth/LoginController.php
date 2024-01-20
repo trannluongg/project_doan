@@ -31,13 +31,16 @@ class LoginController extends Controller
     {
         $data = $this->authService->postLogin($request);
         Config::set('auth.defaults.guard', 'users');
-        $user = JWTAuth::setToken(AuthMe::token('users'))->toUser();
-        if ($user->status == 2)
-        {
-            Auth::guard('users')->logout();
-            AuthMe::setTokenUser(null);
-            return response()->json([], Response::HTTP_UNAUTHORIZED);
-        }
+		if (AuthMe::token('users')) {
+			$user = JWTAuth::setToken(AuthMe::token('users'))->toUser();
+			if ($user->status == 2)
+			{
+				Auth::guard('users')->logout();
+				AuthMe::setTokenUser(null);
+				return response()->json([], Response::HTTP_UNAUTHORIZED);
+			}
+		}
+
         return $data;
     }
 

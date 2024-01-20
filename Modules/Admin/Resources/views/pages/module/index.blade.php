@@ -3,11 +3,11 @@
 @section('title', 'Module')
 
 @section('css')
-    <link rel="stylesheet" href="{{ asset('assets/css/admin/toastr.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/core/css/admin/toastr.css') }}">
     <style>
         <?= $style = file_get_contents('assets/css/module.min.css');?>
     </style>
-    <link rel="stylesheet" href="{{ asset('assets/css/admin/select2.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/core/css/admin/select2.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/admin/dragula.min.css') }}">
 @endsection
 
@@ -34,8 +34,8 @@
 @endsection
 
 @section('script')
-    <script type="text/javascript" src="{{ asset('assets/js/admin/toastr.min.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('assets/js/admin/daterangepicker_format.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('assets/core/js/admin/toastr.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('assets/core/js/admin/daterangepicker_format.js') }}"></script>
     <script type="text/javascript" src="{{ asset('assets/js/admin/dragula.min.js') }}"></script>
     <script type="text/javascript" src="{{ asset('assets/js/module.js') }}"></script>
 @endsection

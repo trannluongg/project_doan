@@ -13,7 +13,7 @@ use App\Core123\Auth\AuthMe;
 use App\Jobs\AssignRolePermissionAdmin;
 use App\Models\Authorization;
 use App\Models\Role;
-use App\Service\BaseService;
+use App\Services\BaseService;
 use App\Transformers\AuthorizationTransformer;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
